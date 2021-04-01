@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4563d3a3.chunk.css",
+    "main.js": "/static/js/main.32bd2e2d.chunk.js",
+    "main.js.map": "/static/js/main.32bd2e2d.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e645a6af.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e645a6af.js.map",
+    "static/css/2.2623327d.chunk.css": "/static/css/2.2623327d.chunk.css",
+    "static/js/2.a0df6150.chunk.js": "/static/js/2.a0df6150.chunk.js",
+    "static/js/2.a0df6150.chunk.js.map": "/static/js/2.a0df6150.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0bf6a2995ec3aeab2cdb9543e09605ad.js": "/precache-manifest.0bf6a2995ec3aeab2cdb9543e09605ad.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.2623327d.chunk.css.map": "/static/css/2.2623327d.chunk.css.map",
+    "static/css/main.4563d3a3.chunk.css.map": "/static/css/main.4563d3a3.chunk.css.map",
+    "static/js/2.a0df6150.chunk.js.LICENSE.txt": "/static/js/2.a0df6150.chunk.js.LICENSE.txt",
+    "static/media/CVDanielleAharon.pdf": "/static/media/CVDanielleAharon.b3cb769e.pdf",
+    "static/media/animal.png": "/static/media/animal.313ed01c.png",
+    "static/media/fitshare.png": "/static/media/fitshare.6f881cd5.png",
+    "static/media/ilist.png": "/static/media/ilist.5cfbfb02.png",
+    "static/media/myimage.png": "/static/media/myimage.01ea0e23.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e645a6af.js",
+    "static/css/2.2623327d.chunk.css",
+    "static/js/2.a0df6150.chunk.js",
+    "static/css/main.4563d3a3.chunk.css",
+    "static/js/main.32bd2e2d.chunk.js"
+  ]
+}
