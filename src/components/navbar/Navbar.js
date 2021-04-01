@@ -46,9 +46,9 @@ export default class Navbar extends Component {
 							<Link  to='/' className='brand-logo'>
 							<h4 className="H4">Danielle Aharon</h4>
 							</Link>
-							<Link to='/' data-target='side-nav' className='sidenav-trigger'>
+							{/* <Link to='/' data-target='side-nav' className='sidenav-trigger'>
 								<i className='material-icons'>menu</i>
-							</Link>
+							</Link> */}
 							<ul  className='rightbar' >
 							<li>
 									<Link to='#about'>

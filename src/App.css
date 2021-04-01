@@ -10,11 +10,8 @@ padding-top: 20px;
 
 }
 
-#experiences {padding-top:65px;}
-#skills {padding-top:65px;}
-#about {padding-top:65px;}
-#Profile{margin-top: -76px;
-}
+
+
 .gmailimg {
   filter: gray;
   filter: grayscale(100%);
@@ -94,18 +91,127 @@ color: rgb(229, 91, 126);
   display: none;
 }
 /* Responsive columns */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px ) {
+  #experiences {padding-top:100px;}
+#skills {padding-top:100px;}
+#about {padding-top:100px;
+}
   .mycolumn {
     width: 100%;
     display: block;
     margin-bottom: 20px;
   }
+ 
+  #img-top{
+    display: none;
+  }
+body{
+  background-color: rgb(64, 64, 64);
 }
+  .light-blue-danielle {
+    /* background: linear-gradient(to bottom, #ffffcc 0%, #336699 100%); */
+    background-color: rgba(128, 128, 128, 0.904);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+  width: 100%;  
+  border-radius: 4px;
+  padding-bottom: 100px;
+  align-items: center;
+  text-align: center;
+
+
+  }
+  #Profile{
+    margin-top: 60px;
+  }
+  .rightbar {
+    margin-top: 12%;
+    text-align: center;
+    white-space: nowrap;
+    align-items: center;
+    margin-left: 17.5%;
+font-style: oblique;
+ font-size: 10px;
+ font-weight: bold;
+    color: white;
+  }
+  .brand-logo .H4{
+    /* margin-left: -50%; */
+    margin-top: -10%;
+    white-space: nowrap;
+    /* padding-left: 20px; */
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    
+  
+  }
+  .brand-logo{
+    color: white;
+    font-family: 'Raleway', sans-serif;}
+}
+@media only screen and (min-width: 768px) {
+  #experiences {padding-top:65px;}
+#skills {padding-top:65px;}
+#about {padding-top:65px;}
+#Profile{margin-top: -76px;}
+  .light-blue-danielle {
+    /* background: linear-gradient(to bottom, #ffffcc 0%, #336699 100%); */
+    background-color: rgb(226, 170, 76);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    margin-left: 555px;
+    padding-right: -15px;
+  width: 70%;  
+  border-radius: 4px;
+  
+  }
+  .rightbar {
+    margin-left: 50%;
+    margin-top: 0px;
+    color: #171108;
+  }
+  .brand-logo .H4{
+    margin-left: -50%;
+    margin-top: 7px;
+    color: #171108;
+    font-size: 45px;
+  
+  }
+  .brand-logo{
+    padding-right: 70px;
+  
+    color: black;
+    font-family: 'Raleway', sans-serif;}
 .marginPageProfile{
  
   z-index: 50;
   width: 17%;
   position: fixed;
+}
+.flot #img-top {
+  display: none;
+  position: absolute;
+ width: 70%;
+ height: 97%;
+ background-color:rgba(133, 131, 129, 0.644);
+ align-items: center;
+ border-radius: 10px;
+font-size: 60px;
+text-align: center;
+padding-top: 23px;
+color: black;
+top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.flot:hover #img-top {
+  display: inline;
+}
+
 }
 .menu{
   position: -webkit-sticky;
@@ -116,23 +222,8 @@ color: rgb(229, 91, 126);
 .card{
   border-radius: 10px;
 }
-.light-blue-danielle {
-  /* background: linear-gradient(to bottom, #ffffcc 0%, #336699 100%); */
-  background-color: rgb(226, 170, 76);
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  margin-left: 555px;
-  padding-right: -15px;
-width: 70%;  
-border-radius: 4px;
 
-}
-.rightbar {
-  margin-left: 50%;
-  margin-top: 0px;
-  color: #171108;
-}
+
 
 #navText{
   color: #171108;
@@ -162,18 +253,7 @@ stroke-width: 20;
   color: #171108;
 
 } */
-.brand-logo .H4{
-  margin-left: -50%;
-  margin-top: 7px;
-  color: #171108;
-  font-size: 45px;
 
-}
-.brand-logo{
-  padding-right: 70px;
-
-  color: black;
-  font-family: 'Raleway', sans-serif;}
 
   .nextpar{
     font-size: 16px;
@@ -213,6 +293,9 @@ stroke-width: 20;
   color:  rgba(66, 124, 231, 0.979);
   text-decoration: underline;
 }
+.card-action{
+  border-radius: 10px;
+}
 .flot {
   position: relative;
   width: 100%;
@@ -229,31 +312,11 @@ stroke-width: 20;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
 }
-.flot #img-top {
-  display: none;
-  position: absolute;
- width: 70%;
- height: 97%;
- background-color:rgba(133, 131, 129, 0.644);
- align-items: center;
- border-radius: 10px;
-font-size: 60px;
-text-align: center;
-padding-top: 23px;
-color: black;
-top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-.flot:hover #img-top {
-  display: inline;
-}
 
 .flot .flot-il {
   position: absolute;
   top: 88%;
-  z-index: 100;
+  z-index: 50;
 
   left: 64%;
   color: black;
@@ -278,7 +341,7 @@ top: 0;
 
   /* Position the tooltip */
   position: absolute;
-  z-index: 100;
+  z-index: 50;
 }
 
 .flot .flot-il:hover .tooltiptext {
@@ -299,7 +362,7 @@ top: 0;
   top: 0;
   left: 0;
 
-  z-index: 99;
+  z-index: 50;
 }
 .gmailcard:hover .img-top {
   display: inline;

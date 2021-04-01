@@ -5,7 +5,7 @@ import cv from '../../../images/CVDanielleAharon.pdf';
 export default function About() {
   return (
     <section id="about" >
-    <div >
+  
       <div className="card">
         <div className="card-content">
           <h6 className="mt-bottom">
@@ -42,22 +42,18 @@ export default function About() {
               <p>
                 <strong>Second Language</strong> - English
               </p>
-             
-            </div>
-          </div>
-          <div className="row mt">
-            <div className="col xl6 l6 m6 s12">
               <p>
                 <strong>My resume:</strong>
                  <a href={cv} target="_blank"> <il className="a-href2">Click to open </il> </a>
               </p>
-             
             </div>
      
           </div>
         </div>
+        <br></br>
+
       </div>
-    </div>
+  
     </section>
   );
 }

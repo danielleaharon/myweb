@@ -9,7 +9,7 @@ export default function Skills() {
           <h6>
             <strong>PROFESSIONAL SKILLS</strong>
           </h6>
-        
+        <hr></hr>
           <br></br>
        
           <div className="row">
@@ -76,8 +76,21 @@ export default function Skills() {
           
             </div>
           </div>
+          <div className="row">
+            <div className="col s6">
+              <p>Payton</p>
+           
+            </div>
+            <div className="col s6">
+              <p>Angular</p>
+           
+            </div>
+          </div>
         </div>
       </div>
+      <br></br>
+      <br></br>
+
     </div>
     </section>
   );

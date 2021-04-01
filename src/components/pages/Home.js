@@ -29,7 +29,7 @@ export default class Home extends Component {
 						<div className='col s12 m9'>
 
 							<div className="try1">
-						{/* <About2 /> */}
+						
 						<About />
 						</div>
 						<div className="try1">

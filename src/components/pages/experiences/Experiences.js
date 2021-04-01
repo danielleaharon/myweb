@@ -56,7 +56,7 @@ export default function Experiences() {
               <div className="mycolumn">
    
                 <div className="flot">
-                  <img  src={iListImg} alt='Danielle Aharon'  />
+                  <img  src={iListImg} alt='Danielle Aharon' onClick={iListDetails} />
                 <a id="img-top" onClick={iListDetails}>  <i class="fas fa-info-circle" ></i></a>
                   <a href="https://github.com/danielleaharon/androidproject" className="flot-il">
                     <i className='fab fa-github fa-lg'></i>
@@ -69,7 +69,7 @@ export default function Experiences() {
 
               <div className="mycolumn" >
                 <div className="flot">
-                  <img src={fitshareImg} alt='Danielle Aharon'  />
+                  <img src={fitshareImg} alt='Danielle Aharon' onClick={fitshareDetails} />
                   <a id="img-top" onClick={fitshareDetails}>  <i class="fas fa-info-circle" ></i></a>
 
                   <a href="https://github.com/danielleaharon/fitshare" className="flot-il">
