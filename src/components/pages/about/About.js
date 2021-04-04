@@ -13,10 +13,8 @@ export default function About() {
             <strong>ABOUT ME</strong>
           </h6>
           <div className="row">
-          {/* <div className="col s12 m6 l6"> */}
          
          <img  src={ImgProfile} alt='Danielle Aharon' />
-       {/* </div> */}
           <div className="col s12 m8 l9">
           <p className="white-text">
           Third-year Computer Science student, Looking to take the first step in the high-tech programming world. 
@@ -34,7 +32,6 @@ export default function About() {
           </h6>
           <hr></hr>
           <br></br>
-        {/* <div className="row"> */}
          
           <div className="row mt">
             <div className="col xl6 l6 m6 s12">
@@ -77,7 +74,6 @@ export default function About() {
 
         <br></br>
 
-      {/* </div> */}
   
     </section>
   );

@@ -3,8 +3,6 @@ import { HashLink as Link } from 'react-router-hash-link';
 import iListImg from '../../../images/ilist.png';
 import fitshareImg from '../../../images/fitshare.png';
 import AnimalImg from '../../../images/animalstore.png';
-import AspNet from '../../../images/Asp-net.png';
-import Info from '../../../images/info.png';
 
 function iListDetails() {
 

@@ -248,7 +248,6 @@ font-style: oblique;
   .brand-logo{
     background-image:  url(images/back.png);
     margin-top: -22%;
-    background-size: 100%;
     padding-top: 100px;
     padding-bottom: 260px;
     text-align: center;
@@ -457,12 +456,7 @@ top: 0;
 }
 
 }
-/* .menu{
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 50;  
-} */
+
 .card{
   border-radius: 10px;
   background-color: #ffffff59;
@@ -481,25 +475,6 @@ top: 0;
 
 }
 
-
-/* #navIcon{
-stroke: white;
-stroke-width: 20;
-  border-radius: 100%;
-  background-size: auto;
-  color: #171108;
-
-} */
-
-
-  .nextpar{
-    font-size: 16px;
-   
-
-
-  }
- 
-
  .try1{
    margin-top: -58px;
  }
@@ -508,7 +483,6 @@ stroke-width: 20;
   max-width: 70%;
   margin: initial;
   border-radius: 10px;
-
 
 }
 
