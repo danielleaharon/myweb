@@ -16,17 +16,15 @@ export default class Home extends Component {
 	render() {
 		return (
 			<section id="home">
-			
+									
 				<Navbar />
 				
 			
 				<div className='container'>
-					<div className='row'>
+					<div className='myrow'>
 				
+			
 						<div className='col s12 m3'>
-							<Profile />
-						</div>
-						<div className='col s12 m9'>
 
 							<div className="try1">
 						
@@ -38,6 +36,9 @@ export default class Home extends Component {
 						<div className="try1">
 							<Skills />
 							</div>
+						</div>
+						<div className='col s12 m1'>
+							<Profile />
 						</div>
 						</div>
 

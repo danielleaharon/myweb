@@ -2,22 +2,20 @@ import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import iListImg from '../../../images/ilist.png';
 import fitshareImg from '../../../images/fitshare.png';
-import AnimalImg from '../../../images/animal.png';
+import AnimalImg from '../../../images/animalstore.png';
 import AspNet from '../../../images/Asp-net.png';
 import Info from '../../../images/info.png';
 
-function iListDetails(id) {
+function iListDetails() {
 
   if (document.getElementById("ilist").style.display == "none") {
     document.getElementById("ilist").style.display = "block"
-    document.getElementById("fitshare").style.display = "none"
   }
   else { document.getElementById("ilist").style.display = "none" }
 }
 function fitshareDetails() {
   if (document.getElementById("fitshare").style.display == "none") {
     document.getElementById("fitshare").style.display = "block"
-    document.getElementById("ilist").style.display = "none"
 
   }
   else {
@@ -52,11 +50,11 @@ export default function Experiences() {
             <i class="fab fa-android"></i>  <strong>Android studio</strong>
             </h8>
             <hr></hr>
-            <div className="myrow">
-              <div className="mycolumn">
+            <div className="row">
+              <div className="col s9 l4 ">
    
                 <div className="flot">
-                  <img  src={iListImg} alt='Danielle Aharon' onClick={iListDetails} />
+                  <img  src={iListImg} alt='Danielle Aharon' />
                 <a id="img-top" onClick={iListDetails}>  <i class="fas fa-info-circle" ></i></a>
                   <a href="https://github.com/danielleaharon/androidproject" className="flot-il">
                     <i className='fab fa-github fa-lg'></i>
@@ -65,29 +63,12 @@ export default function Experiences() {
 
                   </a>
                 </div>
+
+       
               </div>
+              <div className="col s9 l8">
 
-              <div className="mycolumn" >
-                <div className="flot">
-                  <img src={fitshareImg} alt='Danielle Aharon' onClick={fitshareDetails} />
-                  <a id="img-top" onClick={fitshareDetails}>  <i class="fas fa-info-circle" ></i></a>
-
-                  <a href="https://github.com/danielleaharon/fitshare" className="flot-il">
-                    <i title="Github" className='fab fa-github fa-lg'></i>
-                    <br></br>
-                    <span class="tooltiptext">Go to github</span>
-
-                  </a>
-                </div>
-              </div>
-
-
-            </div>
-            <div className="myrow">
-
-              <div id="ilist" className="details">
-                {/* <blockquote className="no-pad"> */}
-                <blockquote className="block" >
+              <blockquote id="yellow"className="block" >
                   <h6 className="no-pad mt-bottom">
                     <strong> iList - List sharing app</strong>
                   </h6>
@@ -97,36 +78,65 @@ export default function Experiences() {
                     The app allows sharing of registered users, uploading photos to items in the list, deleting, adding, and tagging items.  Server side in firebase
 
                  <br></br> Also supports Hebrew and English and different colors.<br></br>
-                    <br></br> <b>Feel free to play with the app   </b>             </p>
+                    <br></br> <b>Feel free to play with the app </b>  <button onClick={iListDetails}>  click me!</button>          </p>
                   <br></br>
+                <br></br>
+              <div id="ilist" className="details">
+            
+               
                   <p align="center"> <iframe
                     src="https://appetize.io/embed/veudf5cvj43qu97h1c0gvrxnn4?device=pixel4"
                     width="308px" height="730px" frameborder="0" scrolling="no" ></iframe>
                   </p>
 
+    
+              </div>
+
                 </blockquote>
               </div>
-              <div id="fitshare" className="details">
-                <blockquote className="block">
+              </div>
+           <div className="row">
+              <div className="col s9 l4" >
+                <div className="flot">
+                  <img src={fitshareImg} alt='Danielle Aharon' />
+                  <a id="img-top" >  <i class="fas fa-info-circle" ></i></a>
+
+                  <a href="https://github.com/danielleaharon/fitshare" className="flot-il">
+                    <i title="Github" className='fab fa-github fa-lg'></i>
+                    <br></br>
+                    <span class="tooltiptext">Go to github</span>
+
+                  </a>
+                </div>
+              </div>
+              <div className="col s9 l8">
+            
+              <blockquote id="purple"className="block" >
+
                   <h6 className="no-pad mt-bottom">
                     <strong>Final project specializing in full stuck</strong>
                   </h6>
                   <p>
                     A social network that allows you to upload videos for home training and opens meetings to invite trainees
                 </p>
+            
                 </blockquote>
+
+</div>
               </div>
-            </div>
+
+            
+         
             <br></br>
             <br></br>
             <h8>
              <h8 className="AspNet-icon">.Net</h8> <strong>ASP.NET Core</strong>
             </h8>
             <hr></hr>
-            <div className="myrow">
-              <div className="mycolumn" >
+            <div className="row">
+              <div className="col s9 l4" >
                 <div className="flot">
-                  <img src={AnimalImg} alt='Danielle Aharon' onClick={AnimalStoreDetails} />
+                  <img src={AnimalImg} alt='Danielle Aharon'  />
                   <a id="img-top" onClick={AnimalStoreDetails}>  <i class="fas fa-info-circle" ></i></a>
 
                   <a href="https://github.com/danielleaharon/animalstore" className="flot-il">
@@ -137,12 +147,9 @@ export default function Experiences() {
                   </a>
                 </div>
               </div>
-            </div>
-            <div className="myrow">
+              <div className="col s9 l8">
 
-              <div id="animalstore" className="details">
-                {/* <blockquote className="no-pad"> */}
-                <blockquote className="block" >
+              <blockquote id="blue" className="block" >
                   <h6 className="no-pad mt-bottom">
                     <strong> Animal Store</strong>
                   </h6>
@@ -152,9 +159,9 @@ export default function Experiences() {
                 
 
                 </blockquote>
-              </div>
-
+                </div>
             </div>
+      
             </div>
           </div>
         </div>

@@ -4,25 +4,24 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-padding-top: 20px;
-
-  
+padding-top: 20px; 
 
 }
 
+.AspNet-icon{
+  background-color: purple;
+  border-radius: 50%;
+  padding: 5px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-right: 5px;
 
-
-.gmailimg {
-  filter: gray;
-  filter: grayscale(100%);
-
+  font-size: 10px;
 }
-.gmailimg:hover{
-  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(0%); 
-}
+
+
 header .scrolldown a:hover { color: #0762f9; }
-.iconFace{
+/* .iconFace{
   color: black;
   font-size: 30px;
 }
@@ -45,15 +44,8 @@ header .scrolldown a:hover { color: #0762f9; }
   }
   .iconLink:hover{
     color: rgb(0, 114, 177);  
-    }
-    .iconGmail .img{
+    } */
 
-      color: black;
-      font-size: 30px;
-    }
-    .iconGmail .img:hover{
-    color: rgb(185, 44, 44);  
-    }
 .icon{
 
   color: black;
@@ -63,17 +55,50 @@ header .scrolldown a:hover { color: #0762f9; }
 color: rgb(229, 91, 126);  
 }
 .block{
-  border-color: rgba(238, 195, 121, 0.788);
-  border-width: 10px; 
+  border-width: 4px; 
   border-top: 0px;
   border-bottom: 0px;
   border-right: 0px;
-  border-style: dotted;
+  border-style: solid;
 
+}
+#yellow{
+  border-color: #F3D668
+
+}
+#purple{
+  border-color: #B388FF;
+
+}
+ #blue{
+  border-color: #7092BF
+
+}
+
+.block button{
+  background-color: transparent; /* Green */
+  border: none;
+  color: white;
+  border: 2px solid #F3D668;
+
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+
+}
+.block button:hover {
+  background-color: #F3D668; /* Green */
+  color: white;
 }
 .mycolumn {
   float: left;
-  width: 25%;
+  width: auto;
   padding: 0 -5px ;
   
 }
@@ -87,11 +112,76 @@ color: rgb(229, 91, 126);
   display: table;
   clear: both;
 }
-.myrow .details{
+.details{
   display: none;
 }
+.iconFace{
+  color: white;
+  font-size: 30px;
+}
+.iconFace:hover{
+  color: rgb(66, 103, 178);  
+  }
+  .iconGit{
+    color: white;
+    font-size: 30px;
+  }
+
+ 
+    .iconGit:hover{
+      color: white;
+  
+      }
+  .iconLink{
+    color: white;
+    font-size: 30px;
+  }
+  .iconLink:hover{
+    color: rgb(0, 114, 177);  
+    }
 /* Responsive columns */
 @media screen and (max-width: 600px ) {
+
+
+
+  .flot .flot-il {
+    position: absolute;
+    top: 81%;
+    z-index: 50;
+  
+    left: 54%;
+    color: black;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    size: auto;
+   padding: 12px 24px;
+    border: none;
+    cursor: pointer; 
+    border-radius: 5px;
+    text-align: center;
+  }
+  .flot .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 1;
+    margin-left: -80px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 50;
+  }
+
+  .flot .flot-il:hover .tooltiptext {
+    visibility: visible;
+  }
+  .flot .flot-il:hover {
+    color:rgb(252, 248, 249); 
+    
+  }
   #experiences {padding-top:100px;}
 #skills {padding-top:100px;}
 #about {padding-top:100px;
@@ -101,7 +191,7 @@ color: rgb(229, 91, 126);
     display: block;
     margin-bottom: 20px;
   }
- 
+
   #img-top{
     display: none;
   }
@@ -111,22 +201,21 @@ body{
   .light-blue-danielle {
     /* background: linear-gradient(to bottom, #ffffcc 0%, #336699 100%); */
     background-color: rgba(128, 128, 128, 0.904);
-    position: fixed;
+    position: sticky;
     z-index: 100;
     top: 0;
   width: 100%;  
   border-radius: 4px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   align-items: center;
   text-align: center;
 
 
   }
-  #Profile{
-    margin-top: 60px;
-  }
+
+ 
   .rightbar {
-    margin-top: 12%;
+    /* margin-top: 12%; */
     text-align: center;
     white-space: nowrap;
     align-items: center;
@@ -136,65 +225,220 @@ font-style: oblique;
  font-weight: bold;
     color: white;
   }
-  .brand-logo .H4{
-    /* margin-left: -50%; */
-    margin-top: -10%;
+  
+  .brand-logo h4{
     white-space: nowrap;
     /* padding-left: 20px; */
     align-items: center;
     color: white;
-    font-size: 25px;
+    font-size: 35px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    /* Gives that scrolling effect as the typing happens */
+    margin: 0,auto;
+    padding-bottom: 10px;
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
     
   
   }
   .brand-logo{
+    background-image:  url(images/back.png);
+    margin-top: -22%;
+    background-size: 100%;
+    padding-top: 100px;
+    padding-bottom: 260px;
+    text-align: center;
+    align-items: center;
     color: white;
-    font-family: 'Raleway', sans-serif;}
-}
-@media only screen and (min-width: 768px) {
-  #experiences {padding-top:65px;}
-#skills {padding-top:65px;}
-#about {padding-top:65px;}
-#Profile{margin-top: -76px;}
-  .light-blue-danielle {
-    /* background: linear-gradient(to bottom, #ffffcc 0%, #336699 100%); */
-    background-color: rgba(128, 128, 128, 0.904);
-    position: fixed;
-    z-index: 100;
     top: 0;
-    margin-left: 555px;
-    padding-right: -15px;
-  width: 70%;  
-  border-radius: 4px;
+    font-family: 'Raleway', sans-serif;}
+
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      /* 50% { border-color: orange; } */
+    }
+    .card-content img{
+      width: 80%;
+      border-radius: 10px;
+      margin-left: 9%;
+      margin-bottom: 5%;
+      margin-top: 5%;
+      }
   
+}
+
+@media only screen and (min-width: 768px) {
+
+
+  .flot .flot-il {
+    position: absolute;
+    top: 88%;
+    z-index: 50;
+  
+    left: 44%;
+    color: black;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    size: auto;
+   padding: 12px 24px;
+    border: none;
+    cursor: pointer; 
+    border-radius: 5px;
+    text-align: center;
   }
-  .rightbar {
-    margin-left: 50%;
-    margin-top: 0px;
-    color: #171108;
+  .flot .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 1;
+    margin-left: -80px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 50;
   }
-  .brand-logo .H4{
-    margin-left: -50%;
+  .flot .flot-il:hover .tooltiptext {
+    visibility: visible;
+  }
+  .flot .flot-il:hover {
+    color:rgb(252, 248, 249); 
+    
+  }
+
+  .container{
+    width: 100%;
+  }
+  .container .row{
+    width: 100%;
+  }
+  .brand-logo .navIcon{
+    width: 40%;
+    margin: auto;
+
+  }
+  .brand-logo h4{
     margin-top: 7px;
     color: #171108;
     font-size: 45px;
+    white-space: nowrap;
+    align-items: center;
+    z-index: 100;
+    color: white;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    /* Gives that scrolling effect as the typing happens */
+    padding-bottom: 10px;
+    margin: 0 auto;
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+    
   
   }
   .brand-logo{
-    padding-right: 70px;
-  
-    color: black;
+    background-image:  url(images/back3.png);
+
+    background-size: 100%;
+    margin-top: -22%;
+    margin-bottom: -13px;
+    padding-top: 550px;
+    padding-bottom: 260px;
+    background-color:  rgba(128, 128, 128, 0.904);
+    text-align: center;
+    align-items: center;
+    color: white;
+    top: 0;
     font-family: 'Raleway', sans-serif;}
+
+.card-content img{
+width: 20%;
+border-radius: 10px;
+}
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      /* 50% { border-color: orange; } */
+    }
+    .brand-logo .iconFace{
+    color: white;
+    font-size: 30px;
+  }
+  .brand-logo .iconFace:hover{
+    color: rgb(66, 103, 178);  
+    }
+    .brand-logo  .iconGit{
+      color: white;
+      font-size: 30px;
+    }
+  
+    .brand-logo   .iconGit:hover{
+        color: white;
+    
+        }
+    .brand-logo .iconLink{
+      color: white;
+      font-size: 30px;
+    }
+    .brand-logo .iconLink:hover{
+      color: rgb(0, 114, 177);  
+      }
+    #experiences {padding-top:65px;}
+    #skills {padding-top:65px;}
+    #about {padding-top:65px;}
+
+    .light-blue-danielle {
+    /* background: linear-gradient(to bottom, #ffffcc 0%, #336699 100%); */
+    background-color: rgba(128, 128, 128, 0.904);
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    width: 100%;  
+    border-radius: 4px;
+   }
+   .rightbar il {
+  
+    text-align: center;
+    align-items: center;
+    font-size: 20px;
+    margin: auto;
+  }
+.rightbar {
+  font-style: oblique;
+  align-items: center;
+  margin: auto;
+  margin-left: 40%;
+
+}
+
+
 .marginPageProfile{
- 
-  z-index: 50;
-  width: 17%;
-  position: fixed;
+    margin: auto;
+
 }
 .flot #img-top {
   display: none;
   position: absolute;
- width: 70%;
+ width: 50%;
  height: 97%;
  background-color:rgba(133, 131, 129, 0.644);
  align-items: center;
@@ -209,24 +453,26 @@ top: 0;
 }
 
 .flot:hover #img-top {
-  display: inline;
+  display: none;
 }
 
 }
-.menu{
+/* .menu{
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 50;  
-}
+} */
 .card{
   border-radius: 10px;
+  background-color: #ffffff59;
+
 }
 
 
 
 #navText{
-  color: #171108;
+  color: #92fd92;
 }
 
 .moreInfo:hover{
@@ -234,17 +480,8 @@ top: 0;
   background-color: white;
 
 }
-.AspNet-icon{
-  color: white;
-  background-color: purple;
-  width: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 3px;
-  padding-right: 3px;
-  border-radius: 100%;
-  font-size: 7px;
-}
+
+
 /* #navIcon{
 stroke: white;
 stroke-width: 20;
@@ -261,9 +498,7 @@ stroke-width: 20;
 
 
   }
-  .card-title2{
-    font-size: 20px;
-  }
+ 
 
  .try1{
    margin-top: -58px;
@@ -283,29 +518,32 @@ stroke-width: 20;
 }
 .a-href{
   text-transform: lowercase;
-  color: black;
+  color: rgb(224, 222, 222);;
 }
 .a-href2{
   text-transform: lowercase;
-  
+  color:  rgba(8, 54, 141, 0.979);
+
 }
 .a-href:hover{
-  color:  rgba(66, 124, 231, 0.979);
+  color:  rgba(8, 54, 141, 0.979);
   text-decoration: underline;
 }
 .card-action{
   border-radius: 10px;
+  z-index: 5px;
+  background-color:#966d2f;
 }
 .flot {
   position: relative;
-  width: 100%;
+  width: auto;
   max-width: 400px;
 }
 
 .flot img {
  
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 70%;
+  width: 50%;
   border-radius: 10px;
 }
 .flot img:hover{
@@ -313,44 +551,6 @@ stroke-width: 20;
 
 }
 
-.flot .flot-il {
-  position: absolute;
-  top: 88%;
-  z-index: 50;
-
-  left: 64%;
-  color: black;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  size: 10%; 
- padding: 12px 24px;
-  border: none;
-  cursor: pointer; 
-  border-radius: 5px;
-  text-align: center;
-}
-.flot .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 1;
-  margin-left: -80px;
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 50;
-}
-
-.flot .flot-il:hover .tooltiptext {
-  visibility: visible;
-}
-.flot .flot-il:hover {
-  color:rgb(229, 91, 126); 
-  
-}
 .gmailcard {
   font-size: 30px;
   position: relative;
@@ -370,6 +570,7 @@ stroke-width: 20;
 .gitcard {
   font-size: 30px;
 
+  color: white;
   background-size: 40%;
 
   position: relative;
