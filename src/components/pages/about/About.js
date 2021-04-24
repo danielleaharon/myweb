@@ -36,7 +36,7 @@ export default function About() {
           <div className="row mt">
             <div className="col xl6 l6 m6 s12">
               <p>
-                <strong>Address:</strong> Ramat Hashhron
+                <strong>Address:</strong> Ramat Hasharon 
               </p>
               <br></br>
               <p>
