@@ -7,6 +7,8 @@ import Skills from './components/pages/skills/Skills';
 import Experiences from './components/pages/experiences/Experiences';
 import Educations from './components/pages/educations/Educations';
 import Portfolios from './components/pages/portfolios/Portfolios';
+import Gallary from './components/pages/Gallary';
+
 import './App.css';
 
 function App() {
@@ -15,10 +17,12 @@ function App() {
       <>
         <Route exact path="/" component={Home} />
         <Switch>
+        <Route path="/gallary" component={Gallary} />
           <Route path="/skills" component={Skills} />
           <Route path="/experiences" component={Experiences} />
           <Route path="/educations" component={Educations} />
           <Route path="/portfolios" component={Portfolios} />
+
         </Switch>
       </>
     </Router>

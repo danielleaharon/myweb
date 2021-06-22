@@ -72,7 +72,11 @@ export default class Navbar extends Component {
 										<il id="navText">Skills</il>
 									</Link>
 								</li>
-
+								<li >
+									<Link to='#gallary'>
+										<il id="navText">Gallary Project</il>
+									</Link>
+								</li>
 
 							</ul>
 						</div>
