@@ -7,7 +7,7 @@ import Skills from './components/pages/skills/Skills';
 import Experiences from './components/pages/experiences/Experiences';
 import Educations from './components/pages/educations/Educations';
 import Portfolios from './components/pages/portfolios/Portfolios';
-import Gallary from './components/pages/Gallary';
+import Gallary from './components/pages/Gallery';
 
 import './App.css';
 

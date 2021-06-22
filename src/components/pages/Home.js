@@ -7,7 +7,7 @@ import Skills from '../../components/pages/skills/Skills';
 import Experiences from '../../components/pages/experiences/Experiences';
 import Educations from '../../components/pages/educations/Educations';
 import Portfolios from '../../components/pages/portfolios/Portfolios';
-import Gallary from '../../components/pages/Gallary';
+import Gallery from './Gallery';
 
 
 export default class Home extends Component {
@@ -36,7 +36,7 @@ export default class Home extends Component {
 							<Skills />
 							</div>
 							<div className="try1">
-							<Gallary />
+							<Gallery />
 							</div>
 						</div>
 						<div className='col s12 m1'>

@@ -185,7 +185,10 @@ color: rgb(229, 91, 126);
   #experiences {padding-top:100px;}
 #skills {padding-top:100px;}
 #about {padding-top:100px;
+
 }
+#gallery {padding-top:100px;}
+
   .mycolumn {
     width: 100%;
     display: block;
@@ -219,7 +222,7 @@ body{
     text-align: center;
     white-space: nowrap;
     align-items: center;
-    margin-left: 17.5%;
+    margin-left: 3%;
 font-style: oblique;
  font-size: 10px;
  font-weight: bold;
@@ -404,6 +407,7 @@ border-radius: 10px;
     #experiences {padding-top:65px;}
     #skills {padding-top:65px;}
     #about {padding-top:65px;}
+    #gallery {padding-top:65px;}
 
     .light-blue-danielle {
     /* background: linear-gradient(to bottom, #ffffcc 0%, #336699 100%); */
@@ -425,7 +429,7 @@ border-radius: 10px;
   font-style: oblique;
   align-items: center;
   margin: auto;
-  margin-left: 40%;
+  margin-left: 35%;
 
 }
 

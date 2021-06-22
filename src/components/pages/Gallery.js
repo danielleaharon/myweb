@@ -3,14 +3,14 @@ import React from 'react';
 
 export default function Gallary() {
     return (
-      <section id="gallary" >
+      <section id="gallery" >
   
         <div >
        
           <div className="card">
             <div className="card-content">
             <h6>
-            <strong>Image Gallary Emulator</strong>
+            <strong>Image Gallery Emulator</strong>
           </h6>
         <hr></hr>
                     
