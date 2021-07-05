@@ -1,13 +1,13 @@
 import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
-import gmail from '../../../images/gmailwhite48.png';
+import gmail from '../../../images/gmailgreen48.png';
 import gmailred from '../../../images/gmailcolor48.png';
 
 export default function Profile() {
 	return (
 		<div id="Profile" className="marginPageProfile">
 		
-			<div className="navIcon">
+			<div className="navIcon" id='navfooter'>
 						<p className='flex-container'>
 							<a className="iconFace" href="https://www.facebook.com/daniella.aharon.7/" target="_blank"><i className='fab fa-facebook fa-lg'></i></a>
 							<a className="iconLink" href="https://www.linkedin.com/in/danielle-aharon-478b67199/" target="_blank"><i className='fab fa-linkedin fa-lg'></i></a>

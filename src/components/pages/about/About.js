@@ -16,10 +16,10 @@ export default function About() {
          
          <img  src={ImgProfile} alt='Danielle Aharon' />
           <div className="col s12 m8 l9">
-          <p className="white-text">
+          <p >
           Third-year Computer Science student, Looking to take the first step in the high-tech programming world. 
           </p>
-          <p className="white-text">
+          <p >
           Has extensive vision, interpersonal communication and a high level of service, thorough, strategic and professional.
           </p>
           </div>
@@ -45,7 +45,7 @@ export default function About() {
               <br></br>
 
               <p>
-                <strong>Phone:</strong> 054-5480180
+                <strong>Phone:</strong> +972-545480180
               </p>
               <br></br>
 

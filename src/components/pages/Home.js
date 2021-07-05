@@ -35,9 +35,7 @@ export default class Home extends Component {
 						<div className="try1">
 							<Skills />
 							</div>
-							<div className="try1">
-							<Gallery />
-							</div>
+							
 						</div>
 						<div className='col s12 m1'>
 							<Profile />

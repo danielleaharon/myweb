@@ -64,7 +64,11 @@ color: rgb(229, 91, 126);
 }
 #yellow{
   border-color: #F3D668
-
+  
+}
+#turquoise{
+  border-color: #A2C5BA
+  
 }
 #purple{
   border-color: #B388FF;
@@ -75,10 +79,20 @@ color: rgb(229, 91, 126);
 
 }
 
+.block .button2{
+  background-color: transparent; /* Green */
+  border: none;
+  color: rgb(0, 0, 0);
+  border: 2px solid #A2C5BA;
+}
+.block .button2:hover {
+  background-color: #A2C5BA; /* Green */
+  color: white;
+}
 .block button{
   background-color: transparent; /* Green */
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   border: 2px solid #F3D668;
 
   padding: 5px 10px;
@@ -116,9 +130,10 @@ color: rgb(229, 91, 126);
   display: none;
 }
 .iconFace{
-  color: white;
+  color: #00322F;
   font-size: 30px;
 }
+
 .iconFace:hover{
   color: rgb(66, 103, 178);  
   }
@@ -133,17 +148,21 @@ color: rgb(229, 91, 126);
   
       }
   .iconLink{
-    color: white;
+    color: #00322F;
     font-size: 30px;
   }
   .iconLink:hover{
     color: rgb(0, 114, 177);  
     }
 /* Responsive columns */
-@media screen and (max-width: 600px ) {
+@media screen and (max-width: 500px ) {
 
+  
+  .brand-logo .navIcon{
+    width: 80%;
+    margin: auto;
 
-
+  }
   .flot .flot-il {
     position: absolute;
     top: 81%;
@@ -198,18 +217,15 @@ color: rgb(229, 91, 126);
   #img-top{
     display: none;
   }
-body{
-  background-color: rgb(64, 64, 64);
-}
+
   .light-blue-danielle {
     /* background: linear-gradient(to bottom, #ffffcc 0%, #336699 100%); */
-    background-color: rgba(128, 128, 128, 0.904);
+    background-image:  url(images/nav.png);
+background-size: 110%;
+padding-top: -10px;
     position: sticky;
     z-index: 100;
     top: 0;
-  width: 100%;  
-  border-radius: 4px;
-  padding-bottom: 50px;
   align-items: center;
   text-align: center;
 
@@ -222,19 +238,20 @@ body{
     text-align: center;
     white-space: nowrap;
     align-items: center;
-    margin-left: 3%;
-font-style: oblique;
+    margin-left: 15%;
  font-size: 10px;
  font-weight: bold;
-    color: white;
+ font-family: 'Raleway', sans-serif;
+    color: #00322F;
   }
   
   .brand-logo h4{
     white-space: nowrap;
     /* padding-left: 20px; */
     align-items: center;
-    color: white;
-    font-size: 35px;
+    color: #00322F;
+    font-size: 27px;
+    padding-left: 18px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -248,15 +265,22 @@ font-style: oblique;
     
   
   }
+  .brand-logo h5{
+    margin-bottom: 25px;
+  }
   .brand-logo{
-    background-image:  url(images/back.png);
-    margin-top: -22%;
-    padding-top: 100px;
-    padding-bottom: 260px;
+    background-image:  url(images/back13-2.png);
+    background-size: 100%;
+    z-index: 6;
+    margin-top: -15%;
+    padding-top:50px;
+    position: relative;
+    height: 100%;
+    padding-bottom: -1px;
+    margin-bottom: -4%;
     text-align: center;
     align-items: center;
-    color: white;
-    top: 0;
+    color: #00322F;
     font-family: 'Raleway', sans-serif;}
 
 
@@ -277,12 +301,28 @@ font-style: oblique;
       margin-bottom: 5%;
       margin-top: 5%;
       }
-  
+      .card{
+        border-radius: 2px;
+        background-color: rgba(247, 244, 239, 0.829);
+        border-right: solid 5px #00322F;
+        border-left: solid 5px #00322F;
+        margin-left: 3%;
+      
+      }
 }
 
 @media only screen and (min-width: 768px) {
 
-
+  .card{
+    border-radius: 2px;
+    background-color: rgba(247, 244, 239, 0.829);
+    border-right: solid 10px #00322F;
+    border-left: solid 10px #00322F;
+  
+    margin-right: -20px;
+    margin-left: 20px;
+  
+  }
   .flot .flot-il {
     position: absolute;
     top: 88%;
@@ -332,14 +372,21 @@ font-style: oblique;
     margin: auto;
 
   }
+  .brand-logo h6{
+    color: #00322F;
+
+  }
+  .brand-logo h5{
+    color: #00322F;
+
+  }
   .brand-logo h4{
     margin-top: 7px;
-    color: #171108;
     font-size: 45px;
     white-space: nowrap;
     align-items: center;
     z-index: 100;
-    color: white;
+    color: #00322F;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     /* Gives that scrolling effect as the typing happens */
@@ -352,14 +399,14 @@ font-style: oblique;
     
   
   }
+
   .brand-logo{
-    background-image:  url(images/back3.png);
+    background-image:  url(images/back13-2.png);
 
     background-size: 100%;
-    margin-top: -22%;
-    margin-bottom: -13px;
-    padding-top: 550px;
-    padding-bottom: 260px;
+    padding-top: 250px;
+    margin-top: -160px;
+    padding-bottom: 85px;
     background-color:  rgba(128, 128, 128, 0.904);
     text-align: center;
     align-items: center;
@@ -382,23 +429,23 @@ border-radius: 10px;
       /* 50% { border-color: orange; } */
     }
     .brand-logo .iconFace{
-    color: white;
+    color: #00322F;
     font-size: 30px;
   }
   .brand-logo .iconFace:hover{
     color: rgb(66, 103, 178);  
     }
     .brand-logo  .iconGit{
-      color: white;
+      color: #00322F;
       font-size: 30px;
     }
   
     .brand-logo   .iconGit:hover{
-        color: white;
+        color: black;
     
         }
     .brand-logo .iconLink{
-      color: white;
+      color: #00322F;
       font-size: 30px;
     }
     .brand-logo .iconLink:hover{
@@ -411,12 +458,14 @@ border-radius: 10px;
 
     .light-blue-danielle {
     /* background: linear-gradient(to bottom, #ffffcc 0%, #336699 100%); */
-    background-color: rgba(128, 128, 128, 0.904);
+    /* background-color: #96B1AD; */
+    background-image:  url(images/nav.png);
+background-size: 100%;
+padding-left: 50px;
     position: sticky;
     z-index: 100;
     top: 0;
     width: 100%;  
-    border-radius: 4px;
    }
    .rightbar il {
   
@@ -426,10 +475,11 @@ border-radius: 10px;
     margin: auto;
   }
 .rightbar {
-  font-style: oblique;
+  font-family: 'Raleway', sans-serif;
   align-items: center;
   margin: auto;
-  margin-left: 35%;
+  margin-left: 34%;
+
 
 }
 
@@ -461,16 +511,12 @@ top: 0;
 
 }
 
-.card{
-  border-radius: 10px;
-  background-color: #ffffff59;
 
-}
 
 
 
 #navText{
-  color: #92fd92;
+  color: #00322F;
 }
 
 .moreInfo:hover{
@@ -496,7 +542,7 @@ top: 0;
 }
 .a-href{
   text-transform: lowercase;
-  color: rgb(224, 222, 222);;
+  color: rgb(0, 0, 0);;
 }
 .a-href2{
   text-transform: lowercase;
@@ -534,6 +580,7 @@ top: 0;
   position: relative;
   display: inline-block;
 }
+
 .gmailcard .img-top {
   display: none;
   position: absolute;
@@ -548,7 +595,7 @@ top: 0;
 .gitcard {
   font-size: 30px;
 
-  color: white;
+  color: #00322F;
   background-size: 40%;
 
   position: relative;
@@ -569,4 +616,8 @@ top: 0;
 .gitcard:hover .img-top {
   display: inline;
 }
+#navfooter{
+  background-image:  url(images/backall.png);
+  background-size: 100%;
 
+}

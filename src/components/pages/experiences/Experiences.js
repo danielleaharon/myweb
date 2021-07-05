@@ -3,24 +3,11 @@ import { HashLink as Link } from 'react-router-hash-link';
 import iListImg from '../../../images/ilist.png';
 import fitshareImg from '../../../images/fitshare.png';
 import AnimalImg from '../../../images/animalstore.png';
+import FlickrGallary from '../../../images/flickrGallery.png';
 
-function iListDetails() {
 
-  if (document.getElementById("ilist").style.display == "none") {
-    document.getElementById("ilist").style.display = "block"
-  }
-  else { document.getElementById("ilist").style.display = "none" }
-}
-function fitshareDetails() {
-  if (document.getElementById("fitshare").style.display == "none") {
-    document.getElementById("fitshare").style.display = "block"
 
-  }
-  else {
-    document.getElementById("fitshare").style.display = "none"
 
-  }
-}
 function AnimalStoreDetails() {
   if (document.getElementById("animalstore").style.display == "none") {
     document.getElementById("animalstore").style.display = "block"
@@ -33,6 +20,57 @@ function AnimalStoreDetails() {
 }
 
 export default function Experiences() {
+  const [isIlist, setIsIlist] = React.useState(false);
+  const [isIlistOpen, setIsIlistOpen] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
+  const [isGallay, setGallay] = React.useState(false);
+  const [fitshareOpen, setFitshareOpen] = React.useState(false);
+  const [AnimaOpen, setAnimaOpen] = React.useState(false);
+  const [galleryOpen, setGalleryOpen] = React.useState(false);
+
+  const GallayPlay=()=>{
+    setGallay(!isGallay);
+    console.log(isGallay)
+  }
+  const iListPlay=()=>{
+    setIsIlist(!isIlist);
+    console.log(isIlist)
+
+  }
+  const iListOpen=()=>{
+    if(isMobile)
+    setIsIlistOpen(!isIlistOpen);
+    console.log(isIlist)
+
+  }
+  const FitshareOpen=()=>{
+    if(isMobile)
+    setFitshareOpen(!fitshareOpen);
+
+  }
+  const AnimalOpen=()=>{
+    if(isMobile)
+    setAnimaOpen(!AnimaOpen);
+
+  }
+  const GalleryOpen=()=>{
+    if(isMobile)
+    setGalleryOpen(!galleryOpen);
+
+  }
+  React.useEffect(()=>{
+    console.log(isMobile)
+    if(window.screen.width < 1280){
+        setIsMobile(true);
+    }else{
+      setIsIlistOpen(true);
+      setFitshareOpen(true);
+      setGalleryOpen(true);
+      setAnimaOpen(true);
+
+    }
+
+  },[])
   return (
     <section id="experiences" >
 
@@ -51,9 +89,9 @@ export default function Experiences() {
             <div className="row">
               <div className="col s9 l4 ">
 
-                <div className="flot">
+                <div className="flot" onClick={iListOpen}>
                   <img src={iListImg} alt='Danielle Aharon' />
-                  <a id="img-top" onClick={iListDetails}>  <i class="fas fa-info-circle" ></i></a>
+                  <a id="img-top" >  <i class="fas fa-info-circle" ></i></a>
                   <a href="https://github.com/danielleaharon/androidproject" className="flot-il">
                     <i className='fab fa-github fa-lg'></i>
                     <br></br>
@@ -64,6 +102,7 @@ export default function Experiences() {
 
 
               </div>
+              {isIlistOpen?(
               <div className="col s9 l8">
 
                 <blockquote id="yellow" className="block" >
@@ -82,26 +121,28 @@ export default function Experiences() {
                     *Supports Both Hebrew and English. And multiple colors schemes<br></br>
                     *server side in Firebase<br></br>
 
-                    <br></br> <b>Feel free to play with the app </b>  <button onClick={iListDetails}>  click me!</button>          </p>
+                    <br></br> <b>Feel free to play with the app </b>  <button onClick={iListPlay}>  click me!</button>          </p>
                   <br></br>
                   <br></br>
-                  <div id="ilist" className="details">
+                 {isIlist?(<div  >
+
 
 
                     <p align="center"> <iframe
                       src="https://appetize.io/embed/veudf5cvj43qu97h1c0gvrxnn4?device=pixel4"
-                      width="308px" height="730px" frameborder="0" scrolling="no" ></iframe>
+                      width="308px" height="730px" frameBorder="0" scrolling="no" ></iframe>
                     </p>
 
 
                   </div>
-
+                   ):<div></div>} 
                 </blockquote>
               </div>
+              ):''}
             </div>
             <div className="row">
               <div className="col s9 l4" >
-                <div className="flot">
+                <div className="flot" onClick={FitshareOpen}>
                   <img src={fitshareImg} alt='Danielle Aharon' />
                   <a id="img-top" >  <i class="fas fa-info-circle" ></i></a>
 
@@ -113,6 +154,7 @@ export default function Experiences() {
                   </a>
                 </div>
               </div>
+              {fitshareOpen?(
               <div className="col s9 l8">
 
                 <blockquote id="purple" className="block" >
@@ -130,8 +172,57 @@ export default function Experiences() {
                 </blockquote>
 
               </div>
+              ):''}
             </div>
+         
+         
+            <div className="row">
+              <div className="col s9 l4 ">
 
+                <div className="flot" onClick={GalleryOpen}>
+                  <img src={FlickrGallary} alt='Danielle Aharon' />
+                  <a id="img-top" >  <i class="fas fa-info-circle" ></i></a>
+                  <a href="https://github.com/danielleaharon/FlickrGallary" className="flot-il">
+                    <i className='fab fa-github fa-lg'></i>
+                    <br></br>
+                    <span class="tooltiptext">Go to github</span>
+
+                  </a>
+                </div>
+
+
+              </div>
+              {galleryOpen?(
+              <div className="col s9 l8">
+
+                <blockquote id="turquoise" className="block" >
+                  <h6 className="no-pad mt-bottom">
+                    <strong> FlickrGallary – Gallary app</strong>
+                  </h6>
+
+                  <p>
+
+                  Photo gallery scrolls with flickr api
+                 <br/>
+
+                    <br></br> <b>Feel free to play with the app </b>  <button className='button2' onClick={GallayPlay}>  click me!</button>          </p>
+                  <br></br>
+                  <br></br>
+                  {isGallay?(  <div >
+
+
+                    <p align="center"> <iframe
+  src="https://appetize.io/embed/8bad8p6wfdckauc47d61qf0n88?device=pixel4"
+  width="308px" height="730px" frameBorder="0" scrolling="no" ></iframe>
+                    </p>
+
+
+                  </div>
+                  ):''}
+                </blockquote>
+              </div>
+              ):''}
+            </div>
 
 
             <br></br>
@@ -142,7 +233,7 @@ export default function Experiences() {
             <hr></hr>
             <div className="row">
               <div className="col s9 l4" >
-                <div className="flot">
+                <div className="flot" onClick={AnimalOpen}>
                   <img src={AnimalImg} alt='Danielle Aharon' />
                   <a id="img-top" onClick={AnimalStoreDetails}>  <i class="fas fa-info-circle" ></i></a>
 
@@ -154,6 +245,7 @@ export default function Experiences() {
                   </a>
                 </div>
               </div>
+              {AnimaOpen?(
               <div className="col s9 l8">
 
                 <blockquote id="blue" className="block" >
@@ -168,6 +260,7 @@ export default function Experiences() {
 
                 </blockquote>
               </div>
+              ):''}
               </div>
 
             </div>

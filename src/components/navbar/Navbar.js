@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import 'materialize-css/dist/css/materialize.min.css';
 import { HashLink as Link } from 'react-router-hash-link';
-import gmail from '../../images/gmailwhite48.png';
+import gmail from '../../images/gmailgreen48.png';
 import gmailred from '../../images/gmailcolor48.png';
 
 
@@ -17,11 +17,9 @@ export default class Navbar extends Component {
 						<h4 className="H4" >Danielle Aharon</h4>
 					</Link>
 					<h5>Full stack developer</h5>
-					<br></br>
 
 					<h6>Looking for full time job</h6>
 
-					<br></br>
 
 					<div className="navIcon">
 						<p className='flex-container'>
@@ -72,11 +70,7 @@ export default class Navbar extends Component {
 										<il id="navText">Skills</il>
 									</Link>
 								</li>
-								<li >
-									<Link to='#gallery'>
-										<il id="navText">Gallery</il>
-									</Link>
-								</li>
+							
 
 							</ul>
 						</div>
