@@ -1,12 +1,20 @@
 import React from 'react';
 
 export default function Skills() {
+  const [isMobile, setIsMobile] = React.useState('solid 17px #384A49');
+  React.useEffect(()=>{
+    console.log(isMobile)
+    if(window.screen.width < 1280)
+        setIsMobile('solid 5px #384A49');
+ 
+
+  },[])
   return (
     <section id="skills">
     <div>
-      <div className="card">
+      <div className="card" style={{ borderBottom: isMobile}}>
         <div className="card-content">
-          <h6>
+          <h6 className='textback'>
             <strong>PROFESSIONAL SKILLS</strong>
           </h6>
         <hr></hr>

@@ -29,9 +29,11 @@ export default class Home extends Component {
 						
 						<About />
 						</div>
+
 						<div className="try1">
 						<Experiences />
 						</div>
+						
 						<div className="try1">
 							<Skills />
 							</div>

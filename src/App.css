@@ -118,7 +118,7 @@ color: rgb(229, 91, 126);
 }
 
 /* Remove extra left and right margins, due to padding */
-.myrow {margin: 0px -5px;}
+.myrow {margin: 0px -5.5%;}
 
 /* Clear floats after the columns */
 .myrow:after {
@@ -201,9 +201,9 @@ color: rgb(229, 91, 126);
     color:rgb(252, 248, 249); 
     
   }
-  #experiences {padding-top:100px;}
-#skills {padding-top:100px;}
-#about {padding-top:100px;
+  #experiences {padding-top:50px;}
+#skills {padding-top:70px;}
+#about {padding-top:70px;
 
 }
 #gallery {padding-top:100px;}
@@ -221,8 +221,8 @@ color: rgb(229, 91, 126);
   .light-blue-danielle {
     /* background: linear-gradient(to bottom, #ffffcc 0%, #336699 100%); */
     background-image:  url(images/nav.png);
-background-size: 110%;
-padding-top: -10px;
+background-size: 100%;
+padding-top: -70px;
     position: sticky;
     z-index: 100;
     top: 0;
@@ -238,7 +238,7 @@ padding-top: -10px;
     text-align: center;
     white-space: nowrap;
     align-items: center;
-    margin-left: 15%;
+    margin-left: 10%;
  font-size: 10px;
  font-weight: bold;
  font-family: 'Raleway', sans-serif;
@@ -273,6 +273,8 @@ padding-top: -10px;
     background-size: 100%;
     z-index: 6;
     margin-top: -15%;
+margin-left: -6%;   
+margin-right: 13.5px; 
     padding-top:50px;
     position: relative;
     height: 100%;
@@ -301,14 +303,22 @@ padding-top: -10px;
       margin-bottom: 5%;
       margin-top: 5%;
       }
+      .textback{
+        background-image:  url(images/textback.png);
+padding: 10px;
+background-size: 100%;
+      }
       .card{
         border-radius: 2px;
         background-color: rgba(247, 244, 239, 0.829);
-        border-right: solid 5px #00322F;
-        border-left: solid 5px #00322F;
-        margin-left: 3%;
+        border-right: solid 5px #384A49;
+        border-left: solid 5px #384A49;
+        margin-left: 2%;
+        margin-right: 8.5%;
       
       }
+     
+    
 }
 
 @media only screen and (min-width: 768px) {
@@ -316,12 +326,17 @@ padding-top: -10px;
   .card{
     border-radius: 2px;
     background-color: rgba(247, 244, 239, 0.829);
-    border-right: solid 10px #00322F;
-    border-left: solid 10px #00322F;
+    border-right: solid 17px #384A49;
+    border-left: solid 17px #384A49;
+  width: 103%;
   
-    margin-right: -20px;
-    margin-left: 20px;
   
+  }
+  .textback{
+    background-image:  url(images/textback.png);
+padding: 10px;
+background-size: 100%;
+width: 20%;
   }
   .flot .flot-il {
     position: absolute;
@@ -524,9 +539,17 @@ top: 0;
   background-color: white;
 
 }
+.home_hr{
+  border: 0;
+  height: 0; /* Firefox... */
+  box-shadow: 0 0 7px 5px #90CCC7;
+  margin-left: 2%;
+
+  margin-top: -20px;
+}
 
  .try1{
-   margin-top: -58px;
+   margin-top: -68px;
  }
 .mycard {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

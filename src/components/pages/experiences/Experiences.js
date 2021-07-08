@@ -78,7 +78,7 @@ export default function Experiences() {
 
         <div className="card">
           <div className="card-content">
-            <h6>
+            <h6 className='textback'>
               <strong>MY PROJECTS</strong>
             </h6>
             <br></br>

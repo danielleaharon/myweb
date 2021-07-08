@@ -8,7 +8,7 @@ export default function Educations() {
 		<div>
 			<div class='card'>
 				<div class='card-content'>
-					<h6>
+					<h6 className='textback'>
 						<strong>EDUCATION</strong>
 					</h6>
 					<table class='striped'>

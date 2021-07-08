@@ -13,7 +13,7 @@ export default class Navbar extends Component {
 		return (
 			<>
 				<div className="brand-logo">
-					<Link to='/' className='brand-logo'>
+					<Link to='/' >
 						<h4 className="H4" >Danielle Aharon</h4>
 					</Link>
 					<h5>Full stack developer</h5>

@@ -9,7 +9,7 @@ export default function About() {
   
       <div className="card">
         <div className="card-content">
-          <h6 className="mt-bottom">
+          <h6 className='textback'>
             <strong>ABOUT ME</strong>
           </h6>
           <div className="row">
