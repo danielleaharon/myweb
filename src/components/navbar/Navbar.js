@@ -1,85 +1,130 @@
-import React, { Component } from 'react';
-//import 'materialize-css/dist/css/materialize.min.css';
+import React from 'react';
+import Contact from '../../pages/contact/contact';
+
+import './navbar.scss';
+import { Sling as Hamburger } from 'hamburger-react'
+
+import Logo from './Logo';
 import { HashLink as Link } from 'react-router-hash-link';
-import gmail from '../../images/gmailgreen48.png';
-import gmailred from '../../images/gmailcolor48.png';
+import cv from '../../images/CVDanielleGoldenberg.pdf';
+
+
+export default function Navbar(props) {
+	const [showContactModel, setShowContactModel] = React.useState(false);
 
 
 
-export default class Navbar extends Component {
+	return (
+		<>
+			{showContactModel && <Contact bgcolor={props.bgcolor} txtcolor={props.txtcolor} showModal={showContactModel} handleClose={() => { setShowContactModel(false) }} />}
+			<div id="navbar-menu" style={{ '--nav-scroll-color': props.bgcolor, '--txtcolor': props.txtcolor }} className={props.mobmenu ? "navbar-menu open" : "navbar-menu close"}  >
+				<div className='nav-menu-logo'>
+					<Logo color="white" bgcolor={props.bgcolor} txtcolor={props.txtcolor} />
+				</div>
+				<div className='mobile-menu d-md-none'>
+					<Hamburger size={25} toggled={props.mobmenu} toggle={props.setMobmenu} color={props.txtcolor} />
+				</div>
+				<div className="nav-menu-rows d-none d-md-flex" >
+					<div className='btn-arrow'  >
+						<Link to='/' >
+							<div className="navLink navLink-who"> Who <span className='link-span'>am i</span></div>
+						</Link>
+						<span className='arrow'><i className="fas fa-angle-right"></i></span>
+					</div>
 
+					<div className='btn-arrow'  >
+						<Link to='/work'>
+							<div className="navLink"> Work</div>
+						</Link>
+						<span className='arrow'>
+							<i className="fas fa-angle-right"></i>
+						</span>
+					</div>
 
-	render() {
-		return (
-			<>
-				<div className="brand-logo">
-					<Link to='/' >
-						<h4 className="H4" >Danielle Aharon</h4>
-					</Link>
-					<h5>Full stack developer</h5>
+					<div className='btn-arrow'  >
+						<a href={cv} target='_blank' rel="noopener noreferrer">
+							<div className="navLink"> resume</div>
+						</a>
+						<span className='arrow'>
+							<i className="fas fa-angle-right"></i>
+						</span>
+					</div>
 
-					<h6>Looking for full time job</h6>
+				</div>
 
+				<div className="nav-menu-rows d-none d-md-flex">
 
-					<div className="navIcon">
-						<p className='flex-container'>
-							<a className="iconFace" href="https://www.facebook.com/daniella.aharon.7/" target="_blank"><i className='fab fa-facebook fa-lg'></i></a>
-							<a className="iconLink" href="https://www.linkedin.com/in/danielle-aharon-478b67199/" target="_blank"><i className='fab fa-linkedin fa-lg'></i></a>
-							<div class="gitcard">
-								<i className='fab fa-github fa-lg' aria-hidden="true"></i>
-								<a className="img-top" href="https://github.com/danielleaharon" target="_blank"><i className='fab fa-github fa-lg' aria-hidden="true"></i></a>
-
-								{/* <a href="https://github.com/danielleaharon" target="_blank">  <img src={githubblack} class="img-top" alt="Card Front"></img></a> */}
-
-							</div>
-							{/* <a className="gmail-logo" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ah.danielle22@gmail.com" target="_blank"><i class="gmail" aria-hidden="true"></i></a> */}
-							<div class="gmailcard">
-								<img src={gmail} alt="Card Back"></img>
-								<a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ah.danielle22@gmail.com" target="_blank">  <img src={gmailred} class="img-top" alt="Card Front"></img></a>
-
-							</div>
-							{/* <a className="gmailimg" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ah.danielle22@gmail.com" target="_blank"><img src={gmailred} ></img></a> */}
-
-
-						</p>
+					<div className='btn-arrow' onClick={() => setShowContactModel(true)} >
+						Contact
+						<span className='arrow'>
+							<i className="fas fa-angle-right"></i>
+						</span>
 					</div>
 				</div>
-				<nav className='light-blue-danielle '>
-					<div className='container'>
-						<div className='nav-wrapper'>
 
-							<ul className='rightbar' >
-								<li>
-									<Link to='#about'>
-										<il id="navText">About</il>
-									</Link>
-								</li>
-								{/* <li >
-									<Link to='#home'>
-										<i id="navText" class='fas fa-home'></i> <il id="navText">Home</il>
-									</Link>
-								</li> */}
+				<div className={props.mobmenu ? "nav-menu-rows-mob d-md-none open" : "nav-menu-rows-mob d-md-none close"}>
+					<div className="nav-menu-rows" >
+						<div className='btn-arrow'  >
+							<Link to='/' onClick={() => props.setMobmenu(false)}>
+								<div className="navLink  navLink-who"> Who  <span className='link-span'>am i</span></div>
+							</Link>
 
-								<li >
-									<Link to='#experiences'>
-										<il id="navText"> My Project</il>
-									</Link>
-								</li>
-								<li>
-									<Link to='#skills'>
-										<il id="navText">Skills</il>
-									</Link>
-								</li>
-							
-
-							</ul>
+							<span className='arrow'>
+								<i className="fas fa-angle-right"></i>
+							</span>
 						</div>
 
+						<div className='btn-arrow'  >
+							<Link to='/work' onClick={() => props.setMobmenu(false)}>
+								<div className="navLink"> Work</div>
+							</Link>
+							<span className='arrow'>
+								<i className="fas fa-angle-right"></i>
+							</span>
+						</div>
+
+						<div className='btn-arrow'  >
+							<a href={cv} target='_blank' rel="noopener noreferrer" onClick={() => props.setMobmenu(false)}>
+								<div className="navLink"> resume</div>
+							</a>
+							<span className='arrow'>
+								<i className="fas fa-angle-right"></i>
+							</span>
+						</div>
 					</div>
-				</nav>
+
+					<div className="nav-menu-rows">
+						<div className='btn-arrow' onClick={() => { props.setMobmenu(false); setShowContactModel(true) }}>
+							Contact
+							<span className='arrow'>
+								<i className="fas fa-angle-right"></i>
+							</span>
+						</div>
+					</div>
+
+					<div className='Social-icons Social-icons-menu'>
+						<div className='social-icons-title w-100'> get in touch</div>
+						<div className='social-icons-links'>
+							<div className="link">
+								<a className="icon-link" rel="noopener noreferrer" href="https://www.facebook.com/daniella.aharon.7/" aria-label="facebook" target="_blank"><i className="fab fa-facebook-f"></i> </a>
+							</div>
+							<div className="link">
+								<a className="icon-link" rel="noopener noreferrer" href="https://www.linkedin.com/in/danielle-aharon-478b67199/" aria-label="linkedin" target="_blank"><i className="fab fa-linkedin-in"></i> </a>
+							</div>
+							<div className="link">
+								<a className="icon-link" rel="noopener noreferrer" href="https://github.com/danielleaharon" aria-label="github" target="_blank"><i className='fab fa-github fa-lg' aria-hidden="true"></i> </a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 
-			</>
-		);
-	}
+
+		</>
+
+
+
+	);
+
 }

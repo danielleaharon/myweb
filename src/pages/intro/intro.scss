@@ -1,0 +1,146 @@
+.intro {
+
+  --hovercolor: #FF70C3;
+  --bg: #04403D;
+  --txt: rgb(238, 238, 238);
+  background-color: var(--bg);
+  min-height: 100vh;
+  transition: 0.65s cubic-bezier(0.62, 0.02, 0.34, 1) 0.15s;
+  position: relative;
+  font-family: 'Sawarabi Mincho', serif;
+  padding-bottom: 0px;
+
+  @media only screen and (min-width: 768px) {
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -10vw;
+      top: calc(var(--scroll-height) - 82%);
+      width: 115vw;
+      height: 52%;
+      background-color: var(--bg);
+      transform: rotate(5deg);
+      z-index: 2;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    min-height: var(--app-height);
+
+  }
+}
+
+
+
+@-webkit-keyframes scrollanim {
+  0% {
+    -webkit-transform: translate(0, -40px);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: translate(0, 0);
+    opacity: 0.8;
+  }
+}
+
+@-moz-keyframes scrollanim {
+  0% {
+    -moz-transform: translate(0, -40px);
+    opacity: 0;
+  }
+
+  60% {
+    -moz-transform: translate(0, 0);
+    opacity: 0.8;
+  }
+}
+
+@keyframes scrollanim {
+  0% {
+    -webkit-transform: translate(0, -40px);
+    -moz-transform: translate(0, -40px);
+    -ms-transform: translate(0, -40px);
+    -o-transform: translate(0, -40px);
+    transform: translate(0, -40px);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    opacity: 0.8;
+  }
+}
+
+@-webkit-keyframes scrollanim2 {
+  0% {
+    -webkit-transform: translate(0, -40px);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: translate(0, 0px);
+    opacity: 0.6;
+  }
+}
+
+@-moz-keyframes scrollanim2 {
+  0% {
+    -moz-transform: translate(0, -40px);
+    opacity: 0;
+  }
+
+  60% {
+    -moz-transform: translate(0, 0px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes scrollanim2 {
+  0% {
+    -webkit-transform: translate(0, -40px);
+    -moz-transform: translate(0, -40px);
+    -ms-transform: translate(0, -40px);
+    -o-transform: translate(0, -40px);
+    transform: translate(0, -40px);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: translate(0, 0px);
+    -moz-transform: translate(0, 0px);
+    -ms-transform: translate(0, 0px);
+    -o-transform: translate(0, 0px);
+    transform: translate(0, 0px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes onFocus {
+  0% {
+    transform: skewY(0deg);
+
+  }
+
+  100% {
+    transform: skewY(20deg);
+
+  }
+}
+
+
+@keyframes titleAnimHero {
+  0% {
+    width: 0;
+
+  }
+
+  100% {
+    width: 100%;
+  }
+}

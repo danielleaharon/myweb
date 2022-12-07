@@ -1,0 +1,14 @@
+.work-section {
+  --hovercolor: #FF70C3;
+  --txt: #04403D;
+  --bg: rgb(238, 238, 238);
+  background-color: rgb(238, 238, 238);
+  min-height: 100vh;
+  position: relative;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0px 35px;
+    padding-top: 90px;
+    min-height: var(--app-height);
+  }
+}

@@ -1,0 +1,265 @@
+#dialog-contact {
+  .MuiBackdrop-root {
+    background-color: transparent;
+  }
+
+  .MuiDialog-paper {
+    overflow-y: visible;
+    border: 2px solid black;
+    border-radius: 0px;
+    background-color: white;
+  }
+
+  .contact-img {
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    z-index: 2;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media only screen and (max-width: 768px) {
+      width: 150px;
+      top: 10%;
+      left: unset;
+    }
+
+  }
+
+  .dialog-contact-page {
+    height: var(--app-height);
+    overflow: hidden;
+    position: relative;
+    z-index: 11;
+  }
+
+  .MuiDialogContent-root {
+    height: 100%;
+  }
+
+  #dialog-description {
+    position: relative;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    font-size: 30px;
+    font-family: 'Sawarabi Mincho', serif;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 16px;
+
+    }
+
+    a {
+      font-size: 2.5em;
+      color: #1a625e;
+      text-decoration: none;
+      -webkit-text-stroke: 1px #1a625e;
+      transition: all ease-in-out 0.3s;
+      position: relative;
+      cursor: url('../../images/cursor-finger.png'), auto;
+      z-index: 2;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 1.6em;
+
+      }
+
+      &::after {
+        content: "";
+        bottom: -20px;
+        left: 10%;
+        position: absolute;
+        width: 80%;
+        border-bottom: 5px solid black;
+        transition: all ease-in-out 0.5s;
+
+        @media only screen and (max-width: 767px) {
+          border-bottom: 3px solid black;
+          bottom: -10px;
+
+        }
+      }
+
+      &:hover {
+        color: #FF70C3;
+        -webkit-text-stroke: 1px #FF70C3;
+        transition: all ease-in-out 0.3s;
+
+        &::after {
+          transform: rotate(-2deg);
+          transition: all ease-in-out 0.5s;
+
+        }
+
+      }
+
+    }
+  }
+
+  .dialog-cotact-btn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    right: 0px;
+    font-size: 25px;
+    line-height: 1;
+    width: 40px;
+    transition: all ease-in 0.3s;
+    border: 2px solid transparent;
+    height: 40px;
+    border-radius: 2px;
+    color: black;
+    cursor: pointer;
+
+  }
+
+  .Social-icons-contact {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 35%;
+    bottom: 0;
+    width: 100%;
+    top: unset;
+    bottom: 0%;
+    left: unset;
+    z-index: 1;
+
+    @media only screen and (max-width: 767px) {
+      padding-top: 10%;
+      height: 34%;
+
+    }
+
+    &::before {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 72vh solid var(--bgcolor);
+      border-left: 100vw solid transparent;
+    }
+
+    .social-icons-title {
+      text-transform: capitalize;
+      letter-spacing: 0.2em;
+      font-size: 16px;
+      text-align: center;
+      -webkit-text-stroke: 0.7px var(--txtcolor);
+      color: var(--txtcolor);
+      z-index: 2;
+
+      @media only screen and (max-width: 767px) {
+        font-size: 12px;
+
+      }
+    }
+
+    .social-icons-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 20px;
+      margin-top: 10px;
+      gap: 1em;
+      position: relative;
+      z-index: 2;
+
+      .icon-link {
+        color: var(--txtcolor);
+        font-size: 24px;
+
+        @media only screen and (max-width: 767px) {
+          font-size: 20px;
+
+        }
+      }
+    }
+  }
+
+  .dialog-close-container {
+    --firstcolor: black;
+    --secondcolor: #F25C66;
+    --line-width: 30px;
+    width: var(--line-width);
+    height: var(--line-width);
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    right: 30px;
+    z-index: 2;
+
+    .leftright {
+      height: 4px;
+      width: var(--line-width);
+      position: absolute;
+      margin-top: 24px;
+      background-color: var(--firstcolor);
+      border-radius: 2px;
+      transform: rotate(45deg);
+      transition: all .3s ease-in;
+    }
+
+    .rightleft {
+      height: 4px;
+      width: var(--line-width);
+      position: absolute;
+      margin-top: 24px;
+      background-color: var(--firstcolor);
+      border-radius: 2px;
+      transform: rotate(-45deg);
+      transition: all .3s ease-in;
+    }
+
+    label {
+      color: black;
+      font-family: Helvetica, Arial, sans-serif;
+      font-size: .6em;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: all .3s ease-in;
+      opacity: 0;
+    }
+
+    .close {
+      margin: 68px 0 0 5px;
+      position: absolute;
+    }
+
+    &:hover {
+      .leftright {
+        transform: rotate(-45deg);
+        background-color: var(--bgcolor);
+      }
+
+      .rightleft {
+        transform: rotate(45deg);
+        background-color: var(--bgcolor);
+      }
+
+      label {
+        opacity: 1;
+      }
+
+    }
+
+  }
+
+}

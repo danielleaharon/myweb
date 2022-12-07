@@ -1,27 +1,34 @@
 import React from 'react';
-import 'materialize-css/dist/css/materialize.min.css';
-import 'materialize-css/dist/js/materialize.min.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './components/pages/Home';
-import Skills from './components/pages/skills/Skills';
-import Experiences from './components/pages/experiences/Experiences';
-import Educations from './components/pages/educations/Educations';
-import Portfolios from './components/pages/portfolios/Portfolios';
-import Gallary from './components/pages/Gallery';
-
+import Work from './pages/work/work';
+import Intro from './pages/intro/intro';
 import './App.css';
 
 function App() {
+  const [mobmenu, setMobmenu] = React.useState(false)
+  React.useEffect(() => {
+    const appHeight = () => {
+      const doc = document.documentElement
+      doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+    }
+    window.addEventListener('resize', appHeight)
+    appHeight()
+  }, [])
+
+  React.useEffect(() => {
+    if (!mobmenu)
+      document.getElementById("navbar-menu").classList.add('nav-scroll')
+
+  }, [mobmenu]);
+
   return (
+
     <Router>
       <>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" render={(props) => <Intro {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
         <Switch>
-          <Route path="/skills" component={Skills} />
-          <Route path="/experiences" component={Experiences} />
-          <Route path="/educations" component={Educations} />
-          <Route path="/portfolios" component={Portfolios} />
-
+          <Route path="/work" render={(props) => <Work {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
         </Switch>
       </>
     </Router>

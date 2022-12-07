@@ -1,0 +1,214 @@
+.bold {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.memory {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 90px);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+
+  @media only screen and (max-width: 768px) {
+    height: calc(100vh - 180px);
+    margin-bottom: 50px;
+
+  }
+
+  .container-slice {
+    width: 88%;
+    height: 100%;
+    z-index: 5;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    padding-top: 40px;
+
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      background-color: unset;
+      padding-top: 0px;
+
+    }
+
+    .container {
+      position: relative;
+      z-index: 5;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+
+  .memory-btns {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    font-family: 'Sawarabi Mincho', serif;
+    font-size: 20px;
+    z-index: 10;
+
+    @media only screen and (max-width: 768px) {
+      position: relative;
+      width: 100%;
+      height: fit-content;
+      margin-bottom: 20px;
+      background-color: unset;
+      top: 0px;
+
+    }
+  }
+
+  .btns {
+    --txtcolor: #04403D;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Sawarabi Mincho', serif;
+    -webkit-text-stroke: 0.5px var(--txtcolor);
+
+    @media only screen and (max-width: 768px) {
+      flex-direction: row;
+    }
+
+    .restart {
+
+      background-color: var(--rndcolor);
+      background-color: transparent;
+      border: none;
+      padding: 8px 0px;
+      font-size: 18px;
+      position: relative;
+      width: 180px;
+      color: var(--txtcolor);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-transform: capitalize;
+      letter-spacing: 0.15em;
+      cursor: pointer;
+
+      @media only screen and (max-width: 768px) {
+        font-size: 12px;
+        width: 110px;
+
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 2px solid;
+        transition: all 0.6s ease;
+        border-radius: 2px;
+
+        @media only screen and (max-width: 768px) {
+          border: 1.5px solid;
+
+        }
+      }
+
+      &::before {
+        top: 0;
+        left: 0;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        border-top-color: var(--txtcolor);
+        ;
+        border-left-color: var(--txtcolor);
+        ;
+        opacity: 1;
+      }
+
+      &::after {
+        bottom: 0;
+        right: 0;
+        border-top-color: transparent;
+        border-left-color: transparent;
+        border-bottom-color: var(--txtcolor);
+        ;
+        border-right-color: var(--txtcolor);
+        ;
+      }
+
+
+      &:hover {
+        background-color: transparent;
+
+        &::before {
+          width: 0%;
+          height: 0%;
+          opacity: 0;
+        }
+
+        &::after {
+          width: 100%;
+          height: 0%;
+          border-right-color: transparent;
+          border-bottom-color: var(--txtcolor);
+          ;
+
+        }
+
+        .arrow {
+          opacity: 1;
+          left: 100%;
+          transition: all 0.3s ease-in-out;
+
+        }
+      }
+
+      .arrow {
+        opacity: 0;
+        color: var(--txtcolor);
+        ;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+        left: 90%;
+        top: 28px;
+        font-size: 20px;
+
+        @media only screen and (max-width: 768px) {
+          top: 53%;
+
+        }
+      }
+
+    }
+  }
+
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(5, 18%);
+    grid-template-rows: repeat(3, 29%);
+    justify-items: center;
+    align-items: stretch;
+    gap: 25px;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    perspective: 100%;
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(5, 16%);
+      gap: 10px;
+      margin: auto;
+      padding: 0;
+
+    }
+  }
+}

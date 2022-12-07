@@ -2,50 +2,65 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/me.jpeg" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon-me.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Danielle Goldenberg portfolio"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/me.jpeg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%//apple-touch-icon.png">
+
+    <system.webServer>
+      <staticContent>
+          <remove fileExtension=".eot" />
+          <mimeMap fileExtension=".eot" mimeType="application/vnd.ms-fontobject" />
+          <remove fileExtension=".ttf" />
+          <mimeMap fileExtension=".ttf" mimeType="application/octet-stream" />
+          <remove fileExtension=".svg" />
+          <mimeMap fileExtension=".svg" mimeType="image/svg+xml" />
+          <remove fileExtension=".woff" />
+          <mimeMap fileExtension=".woff" mimeType="application/font-woff" />
+        </staticContent>
+    </system.webServer>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <script
-      defer
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
+        <script
+        async
       src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"
     ></script>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <title>Danielle Aharon</title>
+    <title>Danielle Goldenberg</title>
+  
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.sidenav');
-        var instances = M.Sidenav.init(elems, options);
-      });
 
-      // Or with jQuery
-      $('.section').hide();
-      setTimeout(function() {
-        $(document).ready(function() {
-          $('.section').fadeIn();
-          $('.loader').fadeOut();
-          $('.sidenav').sidenav();
-        });
-      }, 1000);
-    </script>
+    <script  async src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <script async src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+
+<!-- <script
+  src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"
+  crossorigin></script> -->
+
+<!-- <script async
+  src="https://unpkg.com/react-bootstrap@next/dist/react-bootstrap.min.js"
+  crossorigin></script> -->
+ 
   </body>
 </html>
