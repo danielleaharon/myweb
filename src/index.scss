@@ -1,13 +1,10 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
 html {
   scroll-behavior: smooth;
 
+  background-color: #04403D;
 }
 
-:root {
-  --color-hover: #FFB5A9;
-  --letter-color: #FFE6FF;
-}
 
 #root {
   overflow: hidden;
@@ -15,8 +12,7 @@ html {
 
 body {
 
-  background-color: whitesmoke !important;
-  font-family: 'Open Sans', sans-serif;
+  background-color: #04403D;
   scroll-behavior: smooth;
   height: auto;
   width: 100vw;

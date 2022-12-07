@@ -22,7 +22,7 @@ export default function Navbar(props) {
 					<Logo color="white" bgcolor={props.bgcolor} txtcolor={props.txtcolor} />
 				</div>
 				<div className='mobile-menu d-md-none'>
-					<Hamburger size={25} toggled={props.mobmenu} toggle={props.setMobmenu} color={props.txtcolor} />
+					<Hamburger size={25} toggled={props.mobmenu} toggle={props.setMobmenu} color={props.txtcolor} label="menu"/>
 				</div>
 				<div className="nav-menu-rows d-none d-md-flex" >
 					<div className='btn-arrow'  >
