@@ -132,7 +132,7 @@ function shuffleCards(array) {
         var cardTypes = document.querySelectorAll('.card');
         cardTypes.forEach(card => {
             card.style.opacity = 1;
-            card.style.display = "flex";
+            card.style.removeProperty("display");
 
         })
     }
@@ -218,7 +218,7 @@ export default function MemoryGame({ active }) {
 
      
         checkCompletion();
-    }, [clearedCards, bestScore, noPlay, moves]);
+    }, [clearedCards, bestScore, noPlay]);
     useEffect(() => {
 
         if (Object.keys(clearedCards).length > 0) {
@@ -233,7 +233,7 @@ export default function MemoryGame({ active }) {
                 }
             })
         } 
-    }, [clearedCards]);
+    }, [clearedCards,noPlay]);
     const checkIsFlipped = (index) => {
         return openCards.includes(index);
     };
