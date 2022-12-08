@@ -129,6 +129,12 @@ function shuffleCards(array) {
         const temp = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temp;
+        var cardTypes = document.querySelectorAll('.card');
+        cardTypes.forEach(card => {
+            card.style.opacity = 1;
+            card.style.display = "flex";
+
+        })
     }
     return array;
 }
@@ -210,6 +216,11 @@ export default function MemoryGame({ active }) {
         };
 
 
+     
+        checkCompletion();
+    }, [clearedCards, bestScore, noPlay, moves]);
+    useEffect(() => {
+
         if (Object.keys(clearedCards).length > 0) {
             Object.keys(clearedCards).forEach((key) => {
                 var cardTypes = document.querySelectorAll('.' + key);
@@ -221,16 +232,8 @@ export default function MemoryGame({ active }) {
 
                 }
             })
-        } else {
-            var cardTypes = document.querySelectorAll('.card');
-            cardTypes.forEach(card => {
-                card.style.opacity = 1;
-                card.style.display = "block";
-
-            })
-        }
-        checkCompletion();
-    }, [clearedCards, bestScore, noPlay, moves]);
+        } 
+    }, [clearedCards]);
     const checkIsFlipped = (index) => {
         return openCards.includes(index);
     };
@@ -302,7 +305,7 @@ export default function MemoryGame({ active }) {
             </div>
 
 
-            {!noPlay && showModal && !showModalProject && <DialogFinish handleRestart={handleRestart} handleClose={() => { setShowModal(false); setBestScore(localStorage.getItem("bestScore")); }} showModal={showModal} moves={moves} bestScore={bestScore} />}
+            {!noPlay && showModal && !showModalProject && <DialogFinish handleRestart={handleRestart} handleClose={() => { setShowModal(false); setBestScore(localStorage.getItem("bestScore")); }} later={handleNotPlay } showModal={showModal} moves={moves} bestScore={bestScore} />}
             {(showModalProject) && <DialogProject showModal={showModalProject} handleClose={() => { setShowModalProject(false) }} content={modalProjectContent} />}
             {(JSON.parse(sessionStorage.getItem("popupStart")) === null) && <DialogProjectStart showModal={true} handleClose={() => {
                 handleRestart(); sessionStorage.setItem("popupStart", true);

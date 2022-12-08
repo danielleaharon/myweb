@@ -9,7 +9,7 @@ import "./dialog.scss";
 
 
 
-export default function DialogProjectFinish({ showModal, handleClose, handleRestart, moves, bestScore }) {
+export default function DialogProjectFinish({ showModal, handleClose, handleRestart, moves, bestScore ,later}) {
 
 
   return (
@@ -76,7 +76,7 @@ export default function DialogProjectFinish({ showModal, handleClose, handleRest
               <i className="fas fa-angle-right"></i>
             </span>
           </div>
-          <div className='project-btn later' onClick={handleClose}>
+          <div className='project-btn later' onClick={()=>{ handleClose(); later();}}>
             maybe later
             <span className='arrow'>
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-emoji-frown" viewBox="0 0 19 19">
