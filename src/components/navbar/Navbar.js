@@ -66,33 +66,28 @@ export default function Navbar(props) {
 
 				<div className={props.mobmenu ? "nav-menu-rows-mob d-md-none open" : "nav-menu-rows-mob d-md-none close"}>
 					<div className="nav-menu-rows" >
-						<div className='btn-arrow'  >
-							<Link to='/' onClick={() => props.setMobmenu(false)}>
+							<Link className='btn-arrow' to='/' onClick={() => props.setMobmenu(false)}>
 								<div className="navLink  navLink-who"> Who  <span className='link-span'>am i</span></div>
-							</Link>
-
-							<span className='arrow'>
+								<span className='arrow'>
 								<i className="fas fa-angle-right"></i>
 							</span>
-						</div>
+							</Link>
 
-						<div className='btn-arrow'  >
-							<Link to='/work' onClick={() => props.setMobmenu(false)}>
+							<Link className='btn-arrow' to='/work' onClick={() => props.setMobmenu(false)}>
 								<div className="navLink"> Work</div>
+								<span className='arrow'>
+								<i className="fas fa-angle-right"></i>
+							</span>
 							</Link>
-							<span className='arrow'>
-								<i className="fas fa-angle-right"></i>
-							</span>
-						</div>
+							
 
-						<div className='btn-arrow'  >
-							<a href={cv} target='_blank' rel="noopener noreferrer" onClick={() => props.setMobmenu(false)}>
+							<a className='btn-arrow' href={cv} target='_blank' rel="noopener noreferrer" onClick={() => props.setMobmenu(false)}>
 								<div className="navLink"> resume</div>
-							</a>
-							<span className='arrow'>
+								<span className='arrow'>
 								<i className="fas fa-angle-right"></i>
 							</span>
-						</div>
+							</a>
+							
 					</div>
 
 					<div className="nav-menu-rows">
