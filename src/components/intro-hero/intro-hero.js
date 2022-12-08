@@ -13,7 +13,7 @@ export default function IntroHero(props) {
 
 
 		<div className={props.mobmenu ? 'intro-contact menu-active' : 'intro-contact '}>
-					<div className='text'>
+					<div className='text col-auto'>
 						{
 							['H', 'i', ',', 'br', 'I', "'", 'm', ' ', 'D', 'a', 'n', 'i', 'e', 'l', 'l', 'e', ',', 'br', 'W', 'e', 'b', ' ', 'D', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r'].map((item, index) => {
 								if (item === " ")
@@ -24,7 +24,7 @@ export default function IntroHero(props) {
 							})
 						}
 					</div>
-					<div className='img'>
+					<div className='img col-3'>
 						<img fetchpriority="high" width={347} height={491} src={ImgProfile} alt="ImgProfile"></img>
 					</div>
 

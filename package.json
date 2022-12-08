@@ -5,24 +5,16 @@
   "dependencies": {
     "@material-ui/core": "^4.12.4",
     "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "animejs": "^3.2.1",
     "bootstrap": "^5.2.1",
     "deck.gl": "^8.8.14",
-    "emailjs-com": "^3.2.0",
     "env-cmd": "^10.1.0",
     "hamburger-react": "^2.5.0",
-    "materialize-css": "^1.0.0",
     "react": "^16.14.0",
     "react-bootstrap": "^2.5.0",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
-    "react-router-hash-link": "^1.2.2",
     "react-scripts": "3.4.0",
-    "react-tetris": "^0.3.0",
-    "react-update-url-on-scroll": "^3.5.0",
-    "sass": "^1.55.0",
-    "styled-components": "^5.3.6"
+    "sass": "^1.55.0"
   },
   "scripts": {
     "start": "react-scripts start",

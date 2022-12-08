@@ -20,7 +20,7 @@ export default function DialogProjectFinish({ showModal, handleClose, handleRest
       aria-describedby="dialog-description"
       id="dialog-project-finish"
     >
-      <div id='dialog-project-start-page' className={(bestScore < moves) ? 'bad' : (bestScore === moves) ? 'good' : 'best'} >
+      <div id='dialog-project-finish-page' className={(bestScore < moves) ? 'bad' : (bestScore === moves) ? 'good' : 'best'} >
         {
           (bestScore < moves) && <div id="dialog-title" >
             You really screwed up this time

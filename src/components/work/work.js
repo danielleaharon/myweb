@@ -2,6 +2,7 @@ import React from 'react';
 import './work.scss';
 import Opium from '../../images/work/opium.svg';
 import Looper from '../../images/work/soundlooper.svg';
+import {  Link } from 'react-router-dom';
 
 
 
@@ -65,7 +66,7 @@ export default function Work({setModalProjectContent,setShowModalProject}) {
 			</div>
 			<div className='intro-work'>
 				<div className='title'> Recent Work </div>
-				<div className='btn-arrow'><a href='/work' > view all work </a>
+				<div className='btn-arrow'><Link to='/work' > view all work </Link>
 					<span className='arrow'>
 						<i className="fas fa-angle-right"></i>
 					</span>

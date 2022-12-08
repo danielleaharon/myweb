@@ -191,15 +191,14 @@
 #dialog-project-finish {
     font-family: 'Sawarabi Mincho', serif;
 
-    #dialog-project-start-page {
+    #dialog-project-finish-page {
         margin: 20px;
         border: 2px solid #04403D;
         padding: 0px 10px;
         width: 600px;
         min-height: 330px;
-        background-image: url('../../images/me-finish-game.png');
+        // background-image: url('../../images/me-finish-game.webp');
         background-repeat: no-repeat;
-        background-size: 50%;
         background-position-x: right;
         background-position-y: 105%;
 
@@ -217,12 +216,13 @@
         }
 
         &.best {
-            background-image: url('../../images/me-finish-game.png');
+            background-image: url('../../images/me-finish-game.webp');
+            background-size: 50%;
 
         }
 
         &.good {
-            background-image: url('../../images/me-good-score.png');
+            background-image: url('../../images/me-good-score.webp');
             background-size: 38%;
 
             #dialog-title {
@@ -233,7 +233,7 @@
         }
 
         &.bad {
-            background-image: url('../../images/me-bad-score.png');
+            background-image: url('../../images/me-bad-score.webp');
             background-size: 33%;
 
             #dialog-title {

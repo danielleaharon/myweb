@@ -5,7 +5,9 @@ import './navbar.scss';
 import { Sling as Hamburger } from 'hamburger-react'
 
 import Logo from './Logo';
-import { HashLink as Link } from 'react-router-hash-link';
+// import { HashLink as Link } from 'react-router-hash-link';
+import {  Link } from 'react-router-dom';
+
 import cv from '../../images/CVDanielleGoldenberg.pdf';
 
 

@@ -10,20 +10,6 @@
   font-family: 'Sawarabi Mincho', serif;
   padding-bottom: 0px;
 
-  @media only screen and (min-width: 768px) {
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: -10vw;
-      top: calc(var(--scroll-height) - 82%);
-      width: 115vw;
-      height: 52%;
-      background-color: var(--bg);
-      transform: rotate(5deg);
-      z-index: 2;
-    }
-  }
 
   @media only screen and (max-width: 768px) {
     min-height: var(--app-height);
