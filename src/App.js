@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Work from './pages/work/work';
 import Intro from './pages/intro/intro';
+import NotFound from './pages/notfound/notfound';
+
 import './App.css';
 
 function App() {
@@ -26,10 +28,14 @@ function App() {
 
     <Router>
       <>
-        <Route exact path="/" render={(props) => <Intro {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
         <Switch>
+
+          <Route exact path="/" render={(props) => <Intro {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
           <Route path="/work" render={(props) => <Work {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
+          <Route path="*" render={(props) => <NotFound {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
+
         </Switch>
+
       </>
     </Router>
   );

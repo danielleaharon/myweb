@@ -24,7 +24,7 @@ export default function IntroHero(props) {
 							})
 						}
 					</div>
-					<div className='img col-3'>
+					<div className='img col-md-3 col-12'>
 						<img fetchpriority="high" width={347} height={491} src={ImgProfile} alt="ImgProfile"></img>
 					</div>
 
