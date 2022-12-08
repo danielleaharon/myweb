@@ -30,8 +30,8 @@ function App() {
       
         <Switch>
 
-          <Route path="/work" render={(props) => <Work {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
-          <Route exact path="/" render={(props) => <Intro {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
+          <Route  path="/work" exact render={(props) => <Work {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
+          <Route  path="/" exact render={(props) => <Intro {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
 
           <Route path="/" render={(props) => <NotFound {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
 
