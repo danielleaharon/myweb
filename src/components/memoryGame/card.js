@@ -19,7 +19,7 @@ const Card = ({ onClick, card, index, isInactive, isFlipped, isDisabled, setShow
   };
   return (
     <div
-      className={classnames("card", {
+      className={classnames("work-card", {
         "is-flipped": isFlipped,
         "is-inactive": isInactive,
         [card.type]: isInactive,

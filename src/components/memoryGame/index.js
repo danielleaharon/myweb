@@ -129,7 +129,7 @@ function shuffleCards(array) {
         const temp = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temp;
-        var cardTypes = document.querySelectorAll('.card');
+        var cardTypes = document.querySelectorAll('.work-card');
         cardTypes.forEach(card => {
             card.style.opacity = 1;
             card.style.removeProperty("display");
