@@ -27,7 +27,7 @@ function App() {
   return (
 
     <Router>
-      <>
+      
         <Switch>
 
           <Route path="/work" render={(props) => <Work {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
@@ -37,7 +37,7 @@ function App() {
 
         </Switch>
 
-      </>
+    
     </Router>
   );
 }

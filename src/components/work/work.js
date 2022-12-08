@@ -42,7 +42,7 @@ const uniqueElementsArray = [
 	}
 
 ];
-export default function Work({setModalProjectContent,setShowModalProject}) {
+export default function Work({setModalProjectContent,setShowModalProject }) {
 	
 
 	return (
@@ -66,7 +66,7 @@ export default function Work({setModalProjectContent,setShowModalProject}) {
 			</div>
 			<div className='intro-work'>
 				<div className='title'> Recent Work </div>
-				<div className='btn-arrow'><Link to='/work' > view all work </Link>
+				<div className='btn-arrow' ><Link to='/work'> view all work </Link>
 					<span className='arrow'>
 						<i className="fas fa-angle-right"></i>
 					</span>
