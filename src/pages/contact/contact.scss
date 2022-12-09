@@ -162,10 +162,12 @@
       color: var(--txtcolor);
       z-index: 2;
 
+
       @media only screen and (max-width: 767px) {
         font-size: 12px;
 
       }
+      
     }
 
     .social-icons-links {
@@ -185,8 +187,12 @@
 
         @media only screen and (max-width: 767px) {
           font-size: 20px;
-
+         
         }
+     
+      }
+      @media only screen and (max-width: 767px) {
+        margin-left: 10px;
       }
     }
   }

@@ -4,6 +4,7 @@ import Contact from '../../pages/contact/contact';
 import './footer.scss';
 import Bye from '../../images/me-contact.webp';
 
+import SocialIcons from '../Social-icons/Social-icons';
 
 
 
@@ -49,15 +50,7 @@ export default function Navbar(props) {
                         </div>
                         <div className='Social-icons Social-icons-footer ' >
 
-                            <div className="link">
-                                <a className="icon-link" rel="noopener noreferrer" href="https://www.facebook.com/daniella.aharon.7/" aria-label="facebook" target="_blank"><i className="fab fa-facebook-f"></i> </a>
-
-                            </div>
-                            <div className="link">
-                                <a className="icon-link" rel="noopener noreferrer" href="https://www.linkedin.com/in/danielle-aharon-478b67199/" aria-label="linkedin" target="_blank"><i className="fab fa-linkedin-in"></i> </a>
-                            </div>
-                            <div className="link">				<a className="icon-link" rel="noopener noreferrer" href="https://github.com/danielleaharon" aria-label="github" target="_blank"><i className='fab fa-github fa-lg' aria-hidden="true"></i> </a>
-                            </div>
+                         <SocialIcons/>
                         </div>
                     </div>
                 </div>

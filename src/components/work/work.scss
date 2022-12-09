@@ -90,7 +90,10 @@
         margin-top: 10px;
         margin-bottom: 10px;
         text-decoration: none;
+        @media only screen and (max-width: 768px) {
+          margin-top: 20px;
 
+        }
      
 
       }
@@ -102,7 +105,7 @@
       --stroke-color: white;
       z-index: 2;
       width: 258px;
-      height: 280px;
+      height: 280px !important;
       box-shadow: rgba(164, 164, 164, 0.25) 0px 50px 100px -20px, rgba(196, 196, 196, 0.3) 0px 30px 60px -30px;
       background: rgba(255, 255, 255, 0.3);
       -webkit-transition: all 400ms ease-in-out;
@@ -113,7 +116,6 @@
 
       @media only screen and (max-width: 768px) {
         width: 258px;
-        height: 280px;
         max-width: 100%;
       }
 
@@ -240,7 +242,7 @@
           text-transform: capitalize;
           letter-spacing: 0.1em;
           cursor: pointer;
-
+        
           .arrow {
             top: 55%;
           }
@@ -260,6 +262,8 @@
 
         @media only screen and (max-width: 768px) {
           transform: translate(0%, 0%);
+          opacity: 1;
+
         }
 
       }

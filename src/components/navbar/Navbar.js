@@ -1,5 +1,8 @@
 import React from 'react';
 import Contact from '../../pages/contact/contact';
+import {sendDataClick} from '../email/email';
+import SocialIcons from '../Social-icons/Social-icons';
+
 
 import './navbar.scss';
 import { Sling as Hamburger } from 'hamburger-react'
@@ -34,7 +37,7 @@ export default function Navbar(props) {
 						<span className='arrow'><i className="fas fa-angle-right"></i></span>
 					</div>
 
-					<div className='btn-arrow'  >
+					<div className='btn-arrow' onClick={()=>sendDataClick('Work')} >
 						<Link to='/work'>
 							<div className="navLink"> Work</div>
 						</Link>
@@ -43,7 +46,7 @@ export default function Navbar(props) {
 						</span>
 					</div>
 
-					<div className='btn-arrow'  >
+					<div className='btn-arrow' onClick={()=>sendDataClick('Resume')} >
 						<a href={cv} target='_blank' rel="noopener noreferrer">
 							<div className="navLink"> resume</div>
 						</a>
@@ -73,7 +76,7 @@ export default function Navbar(props) {
 							</span>
 							</Link>
 
-							<Link className='btn-arrow' to='/work' onClick={() => props.setMobmenu(false)}>
+							<Link className='btn-arrow' to='/work' onClick={() => {sendDataClick('Resume');props.setMobmenu(false)}}>
 								<div className="navLink"> Work</div>
 								<span className='arrow'>
 								<i className="fas fa-angle-right"></i>
@@ -81,7 +84,7 @@ export default function Navbar(props) {
 							</Link>
 							
 
-							<a className='btn-arrow' href={cv} target='_blank' rel="noopener noreferrer" onClick={() => props.setMobmenu(false)}>
+							<a className='btn-arrow' href={cv} target='_blank' rel="noopener noreferrer" onClick={() => {sendDataClick('Resume'); props.setMobmenu(false)}}>
 								<div className="navLink"> resume</div>
 								<span className='arrow'>
 								<i className="fas fa-angle-right"></i>
@@ -101,17 +104,7 @@ export default function Navbar(props) {
 
 					<div className='Social-icons Social-icons-menu'>
 						<div className='social-icons-title w-100'> get in touch</div>
-						<div className='social-icons-links'>
-							<div className="link">
-								<a className="icon-link" rel="noopener noreferrer" href="https://www.facebook.com/daniella.aharon.7/" aria-label="facebook" target="_blank"><i className="fab fa-facebook-f"></i> </a>
-							</div>
-							<div className="link">
-								<a className="icon-link" rel="noopener noreferrer" href="https://www.linkedin.com/in/danielle-aharon-478b67199/" aria-label="linkedin" target="_blank"><i className="fab fa-linkedin-in"></i> </a>
-							</div>
-							<div className="link">
-								<a className="icon-link" rel="noopener noreferrer" href="https://github.com/danielleaharon" aria-label="github" target="_blank"><i className='fab fa-github fa-lg' aria-hidden="true"></i> </a>
-							</div>
-						</div>
+						<SocialIcons/>
 					</div>
 				</div>
 			</div>

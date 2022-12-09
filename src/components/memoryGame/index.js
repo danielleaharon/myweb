@@ -218,7 +218,7 @@ export default function MemoryGame({ active }) {
 
      
         checkCompletion();
-    }, [clearedCards, bestScore, noPlay]);
+    }, [clearedCards, bestScore, noPlay,moves]);
     useEffect(() => {
 
         if (Object.keys(clearedCards).length > 0) {
