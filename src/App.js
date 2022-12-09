@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Work from './pages/work/work';
 import Intro from './pages/intro/intro';
 import NotFound from './pages/notfound/notfound';
-import {sendData} from './components/email/email';
+// import {sendData} from './components/email/email';
 
 import './App.css';
 
@@ -19,12 +19,9 @@ function App() {
     appHeight()
   }, [])
 
-  React.useEffect(() => {
-
-  
-
-    sendData();
-  },[])
+  // React.useEffect(() => {
+  //   sendData();
+  // },[])
   React.useEffect(() => {
     if (!mobmenu)
       document.getElementById("navbar-menu").classList.add('nav-scroll')
@@ -38,10 +35,7 @@ function App() {
         <Switch>
 
           <Route  path="/work" exact render={(props) => <Work {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
-          {/* <Route  path="/email" exact render={(props) => <Email {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} /> */}
-
           <Route  path="/" exact render={(props) => <Intro {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
-
           <Route path="/" render={(props) => <NotFound {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
 
         </Switch>
