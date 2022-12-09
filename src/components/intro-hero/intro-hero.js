@@ -11,6 +11,7 @@ export default function IntroHero(props) {
 
 	return (
 
+		<div id="intro-contact" className='area'>
 
 		<div className={props.mobmenu ? 'intro-contact menu-active' : 'intro-contact '}>
 					<div className='text col-auto'>
@@ -36,6 +37,7 @@ export default function IntroHero(props) {
 							</svg>
 						</div>
 					</div>
+				</div>
 				</div>
 
 	);

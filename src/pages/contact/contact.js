@@ -10,7 +10,7 @@ import {
   DialogContent,
 } from "@material-ui/core";
 
-export default function Contact({ showModal, handleClose, bgcolor, txtcolor }) {
+export default function Contact({ showModal, handleClose , state}) {
 
   return <Dialog
     open={showModal}
@@ -20,7 +20,8 @@ export default function Contact({ showModal, handleClose, bgcolor, txtcolor }) {
     aria-describedby="dialog-description"
     id="dialog-contact"
     maxWidth='xl'
-    style={{ '--bgcolor': bgcolor, '--txtcolor': txtcolor }} >
+    className={state}
+     >
     <div className='dialog-contact-page'>
       <div id="dialog-content-title">
       </div>

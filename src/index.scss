@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-
   background-color: #04403D;
 }
 
@@ -23,19 +22,21 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 
 
   @media only screen and (max-width: 768px) {
     height: var(--app-height);
   }
 }
-.whatsapp{
+
+.whatsapp {
   transform: scaleX(-1);
- 
+
 }
+
 .area {
-  scroll-snap-align: center;
+  scroll-snap-align: end;
   height: 100vh;
 
   @media only screen and (max-width: 768px) {
@@ -73,9 +74,7 @@ body {
     border-bottom-color: transparent;
     border-right-color: transparent;
     border-top-color: var(--txtcolor);
-    ;
     border-left-color: var(--txtcolor);
-    ;
     opacity: 1;
   }
 

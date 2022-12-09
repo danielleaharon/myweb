@@ -2,7 +2,7 @@ import React from 'react';
 import './work.scss';
 import Opium from '../../images/work/opium.svg';
 import Looper from '../../images/work/soundlooper.svg';
-import {  Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
@@ -42,8 +42,8 @@ const uniqueElementsArray = [
 	}
 
 ];
-export default function Work({setModalProjectContent,setShowModalProject }) {
-	
+export default function Work({ setModalProjectContent, setShowModalProject }) {
+
 
 	return (
 
@@ -66,11 +66,13 @@ export default function Work({setModalProjectContent,setShowModalProject }) {
 			</div>
 			<div className='intro-work'>
 				<div className='title'> Recent Work </div>
-				<Link  className='btn-arrow' to='/work'> view all work  <span className='arrow'>
+				<Link className='btn-arrow' to='/work'> view all work
+					<span className='arrow'>
 						<i className="fas fa-angle-right"></i>
-					</span></Link>
-					
-				
+					</span>
+				</Link>
+
+
 			</div>
 			<div className='work-card Looper' style={{ '--bg': 'url(' + Looper + ')' }}>
 				<div className="top card-slice">

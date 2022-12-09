@@ -1,6 +1,6 @@
 .logo {
 
-    color: var(--txtcolor);
+    color: var(--txt);
     font-family: 'Sawarabi Mincho', serif;
     position: relative;
     font-size: 60px;
@@ -21,25 +21,25 @@
     }
 
     &:hover {
-        color: var(--txtcolor);
+        color: var(--txt);
     }
 
     .logo-title {
         letter-spacing: 0.1em;
-        -webkit-text-stroke: 5px var(--txtcolor);
+        -webkit-text-stroke: 5px var(--txt);
 
     }
 
     .logo-description {
         position: absolute;
-        background-color: var(--bgcolor);
+        background-color: var(--bg);
         font-size: 0.2em;
         letter-spacing: 0.1em;
         left: -8px;
         top: 40%;
         border-top: 2px solid #FF70C3;
         border-bottom: 2px solid #FF70C3;
-        -webkit-text-stroke: 0.5px var(--txtcolor);
+        -webkit-text-stroke: 0.5px var(--txt);
         padding: 0px 4px;
 
 

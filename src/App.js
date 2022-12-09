@@ -5,11 +5,16 @@ import Work from './pages/work/work';
 import Intro from './pages/intro/intro';
 import NotFound from './pages/notfound/notfound';
 // import {sendData} from './components/email/email';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/footer';
+import Contact from './pages/contact/contact';
 
 import './App.css';
 
 function App() {
-  const [mobmenu, setMobmenu] = React.useState(false);
+  const [showContactModel, setShowContactModel] = React.useState(false);
+  const [state, setState] = React.useState('intro-slug');
+
   React.useEffect(() => {
     const appHeight = () => {
       const doc = document.documentElement
@@ -22,26 +27,32 @@ function App() {
   // React.useEffect(() => {
   //   sendData();
   // },[])
-  React.useEffect(() => {
-    if (!mobmenu)
-      document.getElementById("navbar-menu").classList.add('nav-scroll')
-
-  }, [mobmenu]);
-
+ 
+  const NavRoute = ({exact,state, path, component: Component}) => (
+    <Route exact={exact} path={path} render={(props) => (
+      <div id="scroll-container-intro" className="scroll-container">
+      <Navbar {...props} state={state} setShowContactModel={(val)=>{setState(state); setShowContactModel(val)}}/>
+        <Component {...props} />
+        {exact && <Footer {...props} state={state}  setShowContactModel={(val)=>{setState(state); setShowContactModel(val)}}/>}
+      </div>
+    )}/>
+  )
   return (
-
+<>
+{showContactModel && <Contact state={state} showModal={showContactModel} handleClose={() => { setShowContactModel(false) }} />}
     <Router>
-      
+
         <Switch>
 
-          <Route  path="/work" exact render={(props) => <Work {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
-          <Route  path="/" exact render={(props) => <Intro {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
-          <Route path="/" render={(props) => <NotFound {...props} mobmenu={mobmenu} setMobmenu={(value) => setMobmenu(value)} />} />
+          <NavRoute path="/work" exact  state={'work-slug'} component= {Work} />
+          <NavRoute path="/" exact state={'intro-slug'} component={Intro} />
+          <NavRoute path="/" state={'not-found'} component={NotFound}  />
 
         </Switch>
+   
 
-    
     </Router>
+    </>
   );
 }
 

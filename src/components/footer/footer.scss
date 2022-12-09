@@ -1,30 +1,46 @@
 .footer {
+    --hovercolor: #FF70C3;
 
-    max-height: 300px !important;
+    max-height: 340px !important;
     font-family: 'Sawarabi Mincho', serif;
-
     font-size: 100px;
     display: flex;
     align-items: center;
-
     color: var(--txt);
     letter-spacing: -0.02em;
     position: relative;
-    padding: 0px 4%;
+    padding: 0px 200px;
     gap: 110px;
     z-index: 3;
+    background-color: var(--bg);
+    width: 100%;
+    overflow: hidden;
+
+    &.work-slug {
+        --txtcolor: #04403D;
+        --txt: #04403D;
+        --bg: rgb(238, 238, 238);
+    }
+
+    &.intro-slug {
+        --txtcolor: rgb(238, 238, 238);
+        --txt: rgb(238, 238, 238);
+        --bg: #04403D;
+    }
 
     @media only screen and (max-width: 767px) {
         font-size: 40px;
         justify-content: end;
         gap: 20px;
         flex-direction: column;
+        padding: 0px 4%;
 
 
-        max-height: 200px !important;
+        max-height: 240px !important;
         padding-bottom: 140px;
 
     }
+
 
     .footer-title {
 
@@ -35,14 +51,12 @@
                 -webkit-text-stroke: 2px var(--hovercolor);
 
                 @media only screen and (max-width: 767px) {
-                    -webkit-text-stroke: 1px var(--txt);
-
+                    -webkit-text-stroke: 1px var(--hovercolor);
                 }
             }
 
             @media only screen and (max-width: 767px) {
                 -webkit-text-stroke: 1px var(--txt);
-
             }
         }
 
@@ -65,16 +79,17 @@
             max-width: 150px;
             position: absolute;
             bottom: 0;
-            left: -25px;
+            left: 10px;
 
         }
 
     }
 
     .footer-content-row-2 {
-        padding-left: 15%;
+        padding-left: 13%;
         display: flex;
         gap: 40px;
+        align-items: center;
 
         @media only screen and (max-width: 767px) {
             padding-left: 0%;
@@ -145,7 +160,7 @@
         &::before {
             content: "";
             position: absolute;
-            top: -186%;
+            top: -210%;
             left: -95%;
             width: 230px;
             height: 150px;
@@ -170,10 +185,7 @@
         --txtcolor: var(--txt);
 
         .social-icons-links {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
+
             padding: 0px 0px;
             gap: 0.25em;
         }
@@ -201,7 +213,7 @@
             position: absolute;
 
             left: 47%;
-            bottom: 40%;
+            bottom: 35%;
 
             .icon-link {
                 font-size: 16px;

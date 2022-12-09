@@ -1,4 +1,19 @@
 #dialog-contact {
+  --hovercolor: #FF70C3;
+
+  &.work-slug,
+  &.not-found {
+    --txtcolor: #04403D;
+    --txt: #04403D;
+    --bg: rgb(238, 238, 238);
+  }
+
+  &.intro-slug {
+    --txtcolor: rgb(238, 238, 238);
+    --txt: rgb(238, 238, 238);
+    --bg: #04403D;
+  }
+
   .MuiBackdrop-root {
     background-color: transparent;
   }
@@ -89,8 +104,8 @@
       }
 
       &:hover {
-        color: #FF70C3;
-        -webkit-text-stroke: 1px #FF70C3;
+        color: var(--hovercolor);
+        -webkit-text-stroke: 1px var(--hovercolor);
         transition: all ease-in-out 0.3s;
 
         &::after {
@@ -149,7 +164,7 @@
       bottom: 0;
       width: 0;
       height: 0;
-      border-bottom: 72vh solid var(--bgcolor);
+      border-bottom: 72vh solid var(--bg);
       border-left: 100vw solid transparent;
     }
 
@@ -167,14 +182,11 @@
         font-size: 12px;
 
       }
-      
+
     }
 
     .social-icons-links {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+
       padding: 0px 20px;
       margin-top: 10px;
       gap: 1em;
@@ -187,10 +199,11 @@
 
         @media only screen and (max-width: 767px) {
           font-size: 20px;
-         
+
         }
-     
+
       }
+
       @media only screen and (max-width: 767px) {
         margin-left: 10px;
       }
@@ -198,8 +211,6 @@
   }
 
   .dialog-close-container {
-    --firstcolor: black;
-    --secondcolor: #F25C66;
     --line-width: 30px;
     width: var(--line-width);
     height: var(--line-width);
@@ -217,7 +228,7 @@
       width: var(--line-width);
       position: absolute;
       margin-top: 24px;
-      background-color: var(--firstcolor);
+      background-color: #1a625e;
       border-radius: 2px;
       transform: rotate(45deg);
       transition: all .3s ease-in;
@@ -228,7 +239,7 @@
       width: var(--line-width);
       position: absolute;
       margin-top: 24px;
-      background-color: var(--firstcolor);
+      background-color: #1a625e;
       border-radius: 2px;
       transform: rotate(-45deg);
       transition: all .3s ease-in;
@@ -252,12 +263,12 @@
     &:hover {
       .leftright {
         transform: rotate(-45deg);
-        background-color: var(--bgcolor);
+        background-color: var(--hovercolor);
       }
 
       .rightleft {
         transform: rotate(45deg);
-        background-color: var(--bgcolor);
+        background-color: var(--hovercolor);
       }
 
       label {

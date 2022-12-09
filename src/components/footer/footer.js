@@ -1,23 +1,16 @@
 import React from 'react';
-import Contact from '../../pages/contact/contact';
-
 import './footer.scss';
 import Bye from '../../images/me-contact.webp';
-
 import SocialIcons from '../Social-icons/Social-icons';
 
 
 
-export default function Navbar(props) {
+export default function Footer(props) {
 
-    const [showContactModel, setShowContactModel] = React.useState(false);
 
     return (
-        <>
-            {showContactModel && <Contact bgcolor={props.bgcolor} txtcolor={props.txtcolor} showModal={showContactModel} handleClose={() => { setShowContactModel(false) }} />}
 
-
-            <div className='footer area  '>
+            <div className={'footer area '+props.state}>
                 <div className='col-auto d-flex justify-content-end '>
                     <div className='footer-img'>
                         <img className='d-none d-md-block' width={350} height={345} src={Bye} alt="me-contact" />
@@ -40,7 +33,7 @@ export default function Navbar(props) {
                     <div className='footer-content-row-2'>
 
                         <div className="footer-rows d-inline-block ">
-                            <div className='btn-arrow' onClick={() => setShowContactModel(true)} >
+                            <div className='btn-arrow' onClick={() => props.setShowContactModel(true)} >
                                 Contact Me
 
                                 <span className='arrow'>
@@ -56,7 +49,7 @@ export default function Navbar(props) {
                 </div>
             </div>
 
-        </>
+     
     );
 
 }

@@ -120,7 +120,7 @@ export function sendDataClick(clickOn) {
 
     return (form)
   }).then(form => {
-    sendEmail(form,'template_juuk0o6');
+    // sendEmail(form,'template_juuk0o6');
   })
   
 
