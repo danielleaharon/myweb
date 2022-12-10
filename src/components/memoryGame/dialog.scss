@@ -1,16 +1,5 @@
-#dialog-project-start {
+.dialog-project {
     font-family: 'Sawarabi Mincho', serif;
-
-    .dialog-project-start-page {
-        margin: 20px;
-        border: 2px solid #04403D;
-        background-image: url('../../images/me-hey.png');
-        background-repeat: no-repeat;
-        background-size: 28%;
-        background-position-x: 0%;
-        background-position-y: 3%;
-
-    }
 
     .MuiPaper-root {
         background-color: rgb(238, 238, 238) !important;
@@ -22,18 +11,161 @@
 
     #dialog-title {
         font-family: 'Sawarabi Mincho', serif;
+        text-transform: capitalize;
+    }
+
+    .project-btn {
+        cursor: pointer;
+        text-transform: capitalize;
+        border: none;
+        padding: 8px 30px;
+        font-size: 18px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 46px;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 14px;
+            margin-top: 0px;
+            margin-left: 0px;
+            height: 40px;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px solid;
+            transition: all 0.6s ease;
+            border-radius: 0px;
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+            border-bottom-color: transparent;
+            border-right-color: transparent;
+            border-top-color: #04403D;
+            border-left-color: #04403D;
+            opacity: 1;
+        }
+
+        &::after {
+            bottom: 0;
+            right: 0;
+            border-top-color: transparent;
+            border-left-color: transparent;
+            border-bottom-color: #04403D;
+            border-right-color: #04403D;
+        }
+
+        &:hover {
+            &::before {
+                width: 0%;
+                height: 0%;
+                opacity: 0;
+            }
+
+            &::after {
+                width: 100%;
+                height: 0%;
+                border-right-color: transparent;
+            }
+
+            .arrow {
+                opacity: 1;
+                left: 36%;
+                transition: all 0.3s ease-in-out;
+
+            }
+        }
+
+        &.later {
+            .arrow {
+                opacity: 0;
+                position: absolute;
+                transition: all 0.3s ease-in-out;
+                left: 92%;
+                top: 25px;
+                font-size: 20px;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    height: 0%;
+                    border-right-color: transparent;
+                    border-bottom-color: #FF70C3;
+
+                }
+
+                .arrow {
+                    opacity: 1;
+                    left: 100%;
+                    transition: all 0.3s ease-in-out;
+                    color: #FF70C3;
+                }
+            }
+        }
+
+        &.start:hover {
+            &::after {
+                width: 100%;
+                height: 0%;
+                border-right-color: transparent;
+                border-bottom-color: #FF70C3;
+
+            }
+
+            .arrow {
+                color: #FF70C3;
+
+            }
+        }
+
+
+        .arrow {
+            opacity: 0;
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            left: 31%;
+            top: 22px;
+            font-size: 20px;
+        }
+
+
+    }
+}
+
+#dialog-project-start {
+
+    .dialog-project-start-page {
+        margin: 20px;
+        border: 2px solid #04403D;
+        background-image: url('../../images/me-hey.png');
+        background-repeat: no-repeat;
+        background-size: 28%;
+        background-position-x: 0%;
+        background-position-y: 3%;
+    }
+
+    #dialog-title {
         font-size: 40px;
         padding: 25px 60px 0px;
         margin: 0px 20px;
-        font-weight: bold;
-        text-transform: capitalize;
         text-align: center;
 
         @media only screen and (max-width: 768px) {
             font-size: 25px;
             padding: 20px 10px 0px;
-
-
         }
     }
 
@@ -46,149 +178,17 @@
             flex-direction: column;
             margin-bottom: 20px;
             margin-top: 20px;
-
-
         }
 
         .project-btn {
-            cursor: pointer;
-            text-transform: capitalize;
-            margin-top: 30px;
-            border: none;
-            padding: 8px 30px;
-            font-size: 18px;
-            position: relative;
-            text-align: center;
             color: black;
-            text-decoration: none;
-            width: 200px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 46px;
-
-            @media only screen and (max-width: 768px) {
-                font-size: 14px;
-                margin-top: 0px;
-                margin-left: 0px;
-                height: 40px;
-
-
-            }
-
-            &::before,
-            &::after {
-                content: "";
-                display: block;
-                position: absolute;
-
-                width: 100%;
-                height: 100%;
-                border: 2px solid;
-                transition: all 0.6s ease;
-                border-radius: 0px;
-            }
-
-            &::before {
-                top: 0;
-                left: 0;
-                border-bottom-color: transparent;
-                border-right-color: transparent;
-                border-top-color: #04403D;
-                border-left-color: #04403D;
-                opacity: 1;
-            }
-
-            &::after {
-                bottom: 0;
-                right: 0;
-                border-top-color: transparent;
-                border-left-color: transparent;
-                border-bottom-color: #04403D;
-                border-right-color: #04403D;
-            }
-
-            &:hover {
-                &::before {
-                    width: 0%;
-                    height: 0%;
-                    opacity: 0;
-                }
-
-                &::after {
-                    width: 100%;
-                    height: 0%;
-                    border-right-color: transparent;
-                }
-
-                .arrow {
-                    opacity: 1;
-                    left: 36%;
-                    transition: all 0.3s ease-in-out;
-
-                }
-            }
-
-            &.later {
-                .arrow {
-                    opacity: 0;
-                    position: absolute;
-                    transition: all 0.3s ease-in-out;
-                    left: 92%;
-                    top: 25px;
-                    font-size: 20px;
-                }
-
-                &:hover {
-                    &::after {
-                        width: 100%;
-                        height: 0%;
-                        border-right-color: transparent;
-                        border-bottom-color: #FF70C3;
-
-                    }
-
-                    .arrow {
-                        opacity: 1;
-                        left: 100%;
-                        transition: all 0.3s ease-in-out;
-                        color: #FF70C3;
-                    }
-                }
-            }
-
-            &.start:hover {
-                &::after {
-                    width: 100%;
-                    height: 0%;
-                    border-right-color: transparent;
-                    border-bottom-color: #FF70C3;
-
-                }
-
-                .arrow {
-                    color: #FF70C3;
-
-                }
-            }
-
-
-            .arrow {
-                opacity: 0;
-                position: relative;
-                transition: all 0.3s ease-in-out;
-                left: 31%;
-                top: 22px;
-                font-size: 20px;
-            }
-
+            margin-top: 30px;
 
         }
     }
 }
 
 #dialog-project-finish {
-    font-family: 'Sawarabi Mincho', serif;
 
     #dialog-project-finish-page {
         margin: 20px;
@@ -204,17 +204,11 @@
             max-width: 87%;
             background-position-y: 100%;
             background-size: 48%;
-
-        }
-
-        .MuiPaper-root {
-            background-color: rgb(238, 238, 238) !important;
         }
 
         &.best {
             background-image: url('../../images/me-finish-game.webp');
             background-size: 50%;
-
         }
 
         &.good {
@@ -231,30 +225,21 @@
             background-size: 33%;
 
             #dialog-title {
-
                 max-width: 100%;
-
             }
-
         }
     }
 
     .MuiDialog-paperWidthSm {
-
         max-width: 700px !important;
     }
 
-    .MuiPaper-rounded {
-        border-radius: 0px;
-    }
+
 
     #dialog-title {
-        font-family: 'Sawarabi Mincho', serif;
         font-size: 30px;
         padding: 25px 10px 0px;
         margin: 0px;
-        font-weight: bold;
-        text-transform: capitalize;
         text-align: left;
         max-width: 70%;
         line-height: 1.2;
@@ -264,11 +249,9 @@
         }
 
         @media only screen and (max-width: 768px) {
-
             font-size: 25px;
             padding: 15px 10px 0px;
             max-width: 100%;
-
         }
     }
 
@@ -282,7 +265,6 @@
     }
 
     #dialog-description {
-        font-family: 'Sawarabi Mincho', serif;
         font-size: 16px;
         color: black;
         margin-left: 0px;
@@ -300,149 +282,31 @@
 
 
         .project-btn {
-            cursor: pointer;
-            text-transform: capitalize;
-            border: none;
-            padding: 8px 30px;
-            font-size: 18px;
-            position: relative;
-            text-align: center;
             color: #04403D;
-            text-decoration: none;
-            width: 200px;
             margin-left: 0px;
 
             @media only screen and (max-width: 768px) {
-                font-size: 14px;
-
                 width: 125px;
-                height: 40px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
                 padding: 0px 0px;
-
-
-            }
-
-            &::before,
-            &::after {
-                content: "";
-                display: block;
-                position: absolute;
-
-                width: 100%;
-                height: 100%;
-                border: 2px solid;
-                transition: all 0.6s ease;
-                border-radius: 0px;
-            }
-
-            &::before {
-                top: 0;
-                left: 0;
-                border-bottom-color: transparent;
-                border-right-color: transparent;
-                border-top-color: #04403D;
-                border-left-color: #04403D;
-                opacity: 1;
-            }
-
-            &::after {
-                bottom: 0;
-                right: 0;
-                border-top-color: transparent;
-                border-left-color: transparent;
-                border-bottom-color: #04403D;
-                border-right-color: #04403D;
             }
 
             &:hover {
-                &::before {
-                    width: 0%;
-                    height: 0%;
-                    opacity: 0;
-                }
-
-                &::after {
-                    width: 100%;
-                    height: 0%;
-                    border-right-color: transparent;
-                }
-
                 .arrow {
-                    opacity: 1;
-                    left: 36%;
-                    transition: all 0.3s ease-in-out;
-
                     @media only screen and (max-width: 768px) {
                         left: 18%;
-
                     }
                 }
             }
-
-            &.later {
-                .arrow {
-                    opacity: 0;
-                    position: absolute;
-                    transition: all 0.3s ease-in-out;
-                    left: 92%;
-                    top: 25px;
-                    font-size: 20px;
-                }
-
-                &:hover {
-                    &::after {
-                        width: 100%;
-                        height: 0%;
-                        border-right-color: transparent;
-                        border-bottom-color: #FF70C3;
-
-                    }
-
-                    .arrow {
-                        opacity: 1;
-                        left: 100%;
-                        transition: all 0.3s ease-in-out;
-                        color: #FF70C3;
-                    }
-                }
-            }
-
-            &.start:hover {
-                &::after {
-                    width: 100%;
-                    height: 0%;
-                    border-right-color: transparent;
-                    border-bottom-color: #FF70C3;
-
-                }
-
-                .arrow {
-                    color: #FF70C3;
-
-                }
-            }
-
 
             .arrow {
-                opacity: 0;
-                position: relative;
-                transition: all 0.3s ease-in-out;
-                left: 31%;
                 top: 23px;
                 font-size: 20px;
 
                 @media only screen and (max-width: 768px) {
                     top: 19px;
-
                     left: 16%;
-
                 }
             }
-
-
         }
     }
 }
@@ -458,28 +322,18 @@
         @media only screen and (max-width: 768px) {
             max-width: 95%;
             min-width: 88%;
-
         }
     }
 
-    .MuiPaper-root {
-
-        background-color: rgb(238, 238, 238) !important;
-    }
-
     #dialog-title {
-        font-family: 'Sawarabi Mincho', serif;
         font-size: 50px;
         padding: 55px 39px 10px;
-        font-weight: bold;
-        text-transform: capitalize;
 
         @media only screen and (max-width: 768px) {
             font-size: 25px;
             display: grid;
             grid-template-columns: 1fr 100px;
             padding: 75px 30px 0px;
-
         }
 
         .project-img {
@@ -502,12 +356,8 @@
                 right: unset;
                 top: -8%;
                 position: relative;
-
-
             }
         }
-
-
     }
 
     .fs18 {
@@ -515,14 +365,11 @@
 
         @media only screen and (max-width: 767px) {
             font-size: 18px;
-
         }
     }
 
     #dialog-description {
-
         white-space: pre-line;
-        font-family: 'Sawarabi Mincho', serif;
         padding: 0px 39px;
         color: #04403D;
         max-width: 80%;
@@ -531,16 +378,12 @@
             max-width: 100%;
             padding: 0px 30px;
             margin-bottom: 50px;
-
         }
 
         li {
             list-style-type: circle;
             margin-left: -12px;
-
-
         }
-
 
         .lang-logo {
             text-transform: capitalize;
@@ -559,13 +402,11 @@
 
             @media only screen and (max-width: 768px) {
                 font-size: 12px;
-
             }
 
             div {
                 display: flex;
                 gap: 6px;
-
             }
 
             a {
@@ -580,8 +421,6 @@
                     top: 5px;
                     left: 2px;
                 }
-
-
             }
 
             a:hover {
@@ -594,7 +433,6 @@
 
                 @media only screen and (max-width: 768px) {
                     font-size: 18px;
-
                 }
             }
         }
@@ -622,7 +460,6 @@
                 content: "";
                 display: block;
                 position: absolute;
-
                 width: 100%;
                 height: 100%;
                 border: 2px solid;
@@ -669,7 +506,6 @@
                     left: 39%;
                     color: #FF70C3;
                     transition: all 0.3s ease-in-out;
-
                 }
             }
 
@@ -681,12 +517,7 @@
                 top: 22px;
                 font-size: 20px;
             }
-
-
         }
-
-
-
 
         .content-demo {
             position: absolute;
@@ -761,9 +592,7 @@
                         label {
                             opacity: 1;
                         }
-
                     }
-
                 }
             }
 
@@ -771,7 +600,7 @@
 
     }
 
-    .project-btn {
+    .project-btn-close {
         font-size: 16px;
         padding: 20px;
         background-color: black;
@@ -782,16 +611,11 @@
         right: 20px;
         cursor: pointer;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-
         transition: all 0.3s ease-in-out;
 
         &:hover {
             transition: all 0.3s ease-in-out;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
         }
-
-
-
     }
 }

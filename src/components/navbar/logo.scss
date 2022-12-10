@@ -1,5 +1,4 @@
 .logo {
-
     color: var(--txt);
     font-family: 'Sawarabi Mincho', serif;
     position: relative;
@@ -14,7 +13,6 @@
     line-height: 1;
     z-index: 10;
 
-
     @media only screen and (min-width: 768px) {
         position: fixed;
         top: 8px;
@@ -27,7 +25,6 @@
     .logo-title {
         letter-spacing: 0.1em;
         -webkit-text-stroke: 5px var(--txt);
-
     }
 
     .logo-description {
@@ -41,14 +38,10 @@
         border-bottom: 2px solid #FF70C3;
         -webkit-text-stroke: 0.5px var(--txt);
         padding: 0px 4px;
-
-
     }
 }
 
 @media only screen and (max-width: 767px) {
-
-
     .nav-scroll {
         padding-left: 20px;
         transition: all ease-in 0.3s;
@@ -61,8 +54,6 @@
             -o-transition: all 0.3s ease;
             -ms-transition: all 0.3s ease;
             line-height: 1;
-
         }
-
     }
 }

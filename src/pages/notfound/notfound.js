@@ -1,6 +1,7 @@
 import React from 'react';
 import './notfound.scss';
 import { Link } from 'react-router-dom';
+import LetterJump from '../../components/letterJump/letterJump';
 
 
 export default function Work(props) {
@@ -9,13 +10,7 @@ export default function Work(props) {
     <div className='not-found-section section'  >
       <div className='not-found-content'>
         <div className='number d-inline'>
-          {['4', '0', '4'].map((item, index) => {
-            if (item === " ")
-              return <span key={index} className=''> </span>
-            if (item === "br")
-              return <br key={index}></br>
-            return <span key={index} className=" jump" >	{item}</span>
-          })}
+          <LetterJump textarr={['4', '0', '4']} />
         </div>        the page not found
         <div className='btn-arrow'><Link to='/' > Go to Intro </Link>
           <span className='arrow'>

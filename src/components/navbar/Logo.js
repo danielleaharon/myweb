@@ -1,7 +1,7 @@
 import React from 'react';
 import './logo.scss';
 
-export default function Logo(props) {
+export default function Logo() {
 	return (
 		<a href='/' className='logo' >
 			<span className='logo-title'>DG</span>

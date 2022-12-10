@@ -18,12 +18,10 @@
     .jump {
       &:hover {
         -webkit-text-stroke: 1px var(--hovercolor);
-
       }
     }
 
     &::after {
-
       content: " ";
       position: absolute;
       bottom: 0;
@@ -33,13 +31,11 @@
       background-color: var(--txt);
       transform: translate(-50%, 0);
       animation: titleAnimHero 0.8s forwards;
-
     }
 
     &.menu-active {
       //menu height + page padding - because the fix position
       padding-top: calc(90px + 60px);
-
     }
 
     .img {
@@ -49,12 +45,10 @@
 
         @media only screen and (max-width: 768px) {
           max-width: 60%;
-
         }
       }
 
       @media only screen and (max-width: 768px) {
-
         display: flex;
         justify-content: center;
         margin-top: 20px;
@@ -63,18 +57,12 @@
     }
 
     @media only screen and (max-width: 768px) {
-
       flex-direction: column;
       font-size: 35px;
       //menu height + page padding - because the fix position
       padding-top: calc(90px + 60px);
-
-
     }
   }
-
-
- 
 }
 
 
@@ -112,10 +100,8 @@
   }
 
   @media only screen and (max-width: 768px) {
-
     left: 50%;
     bottom: unset;
     top: calc((var(--app-height) - 30px));
   }
 }
-

@@ -1,9 +1,7 @@
 import React from 'react';
 import './about.scss';
 
-
-
-export default function About(props) {
+export default function About() {
 
   return (
 
@@ -44,10 +42,8 @@ export default function About(props) {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     </div>
 

@@ -1,12 +1,9 @@
 // Mixin for shadow button with block sliding up
 @mixin btn-border-slide($color, $hoverColor, $borderWidth, $time) {
   $easing: cubic-bezier(0.4, 0, 0.2, 1);
-  
   position: relative;
-
   display: inline-block;
   padding: 0.5em 2em;
-
   cursor: auto;
   overflow: hidden;
 
@@ -15,10 +12,8 @@
     content: "";
     position: absolute;
     left: 0;
-
     height: $borderWidth;
     width: 100%;
-
     background-color: $color;
   }
 
@@ -31,17 +26,16 @@
   }
 
   &:hover {
-
-    & > * {
-
-      & > * {
+    &>* {
+      &>* {
 
         &:before,
         &:after {
           transform: translate3d(0, 0, 0);
         }
 
-        & > * {
+        &>* {
+
           &:before,
           &:after {
             transform: translate3d(0, 0, 0);
@@ -51,17 +45,15 @@
     }
   }
 
-  & > * {
+  &>* {
 
     &:before,
     &:after {
       content: "";
       position: absolute;
       top: 0;
-
       height: 100%;
       width: $borderWidth;
-
       background-color: $color;
     }
 
@@ -73,7 +65,7 @@
       right: 0;
     }
 
-    & > * {
+    &>* {
 
       &:before,
       &:after {
@@ -81,28 +73,24 @@
         position: absolute;
         left: 0;
         z-index: 9;
-
         height: $borderWidth;
         width: 100%;
-
         background-color: $hoverColor;
       }
 
       &:before {
         top: 0;
-
         transform: translate3d(-105%, 0, 0);
         transition: transform $time $easing;
       }
 
       &:after {
         bottom: 0;
-        
         transform: translate3d(105%, 0, 0);
         transition: transform $time $easing;
       }
 
-      & > * {
+      &>* {
 
         &:before,
         &:after {
@@ -110,23 +98,19 @@
           position: absolute;
           top: 0;
           z-index: 9;
-
           height: 100%;
           width: $borderWidth;
-
           background-color: $hoverColor;
         }
 
         &:before {
           left: 0;
-
           transform: translate3d(0, 105%, 0);
           transition: transform $time $easing;
         }
 
         &:after {
           right: 0;
-
           transform: translate3d(0, -105%, 0);
           transition: transform $time $easing;
         }
@@ -136,326 +120,268 @@
 }
 
 
-.intro-about-section{
+.intro-about-section {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Sawarabi Mincho', serif;
+
   @media only screen and (max-width: 767px) {
-
     padding-top: 70px;
-}
+  }
 
-&.active{
-  .exp-card {
+  &.active {
+    .exp-card {
+      --animtime: 2s;
 
-    --animtime:2s;
-
-    & > * {
-
-      & > * {
-
-        &:before{
-          animation:borderAnimBefore1 var(  --animtime) alternate ;
-
-        }
-        &:after {
-          animation:borderAnimAfter1 var(  --animtime) alternate ;
-        }
-
-        & > * {
-          &:before{
-            animation:borderAnimBefore2 var(  --animtime) alternate ;
-
+      &>* {
+        &>* {
+          &:before {
+            animation: borderAnimBefore1 var(--animtime) alternate;
           }
+
           &:after {
-            animation:borderAnimAfter2 var(  --animtime) alternate ;
+            animation: borderAnimAfter1 var(--animtime) alternate;
+          }
+
+          &>* {
+            &:before {
+              animation: borderAnimBefore2 var(--animtime) alternate;
+            }
+
+            &:after {
+              animation: borderAnimAfter2 var(--animtime) alternate;
+            }
           }
         }
       }
     }
-  }
-  .skill{
-    &::after{
-    animation: lineAnim 2s forwards;
 
+    .skill {
+      &::after {
+        animation: lineAnim 2s forwards;
+      }
     }
-  }
-  .intro-about{
- 
-    .title{
-    
-  
-        &::after{
+
+    .intro-about {
+      .title {
+        &::after {
           animation: titleAnim 2s forwards;
-
-  
         }
-       
-  
+      }
     }
   }
-}
-.intro-about{
-  font-size: 16px;
-  max-width: 55%;
-  text-align: center;
-  line-height: 1.6;
-  color: var(--txt);;
-  .title{
+
+  .intro-about {
+    font-size: 16px;
+    max-width: 55%;
+    text-align: center;
+    line-height: 1.6;
+    color: var(--txt);
+    ;
+
+    .title {
       font-size: 60px;
       position: relative;
       line-height: 1.4;
       margin-bottom: 20px;
 
-      &::after{
-          content: "";
-          bottom: 0;
-          left: 50%;
-          position: absolute;
-          width: 10%;
-          border-bottom: 2px solid var(--txt);;
-      
-          transform: rotate(-2deg) translate(-50%, 0) ; /*Add this*/
-
-
-      }
-      @media only screen and (max-width: 767px) {
-          font-size: 35px;
-
-      }
-
-  }
-  // .btn-arrow{
-  //     font-size: 14px;
-  //     padding: 10px 20px;
-  //     text-align: center;
-  //     min-width: 100px;
-  //     display: inline-block;
-        
-  //         text-transform: uppercase;
-  //         letter-spacing: 0.1em;
-  //         margin-top: 10px ;
-  //         margin-bottom: 10px ;
-
-  //         a{
-  //             color: black;
-  //             text-decoration: none;
-  //         }
-      
-  // }
-  .skills{
-    .skill-lines{
-      .skill{
-
-      --border-width:3px;
-      text-align: left;
-      width: 100%;
-      position: relative;
-      margin-top: 20px;
-      font-size: 16px;
-      overflow: hidden;
-      padding-bottom: 3px;
-
-      &::after{
-        content: " ";
-        position: absolute;
-        left: 0;
-        height:var(--border-width);
-        background-color: #FF70C3;
+      &::after {
+        content: "";
         bottom: 0;
-
-      }
-      &::before{
-        content: " ";
+        left: 50%;
         position: absolute;
-        left: 0;
-        height:var(--border-width);
-        background-color: var(--txt);;
-        bottom: 0;
-        width: 100%;
+        width: 10%;
+        border-bottom: 2px solid var(--txt);
+        ;
+        transform: rotate(-2deg) translate(-50%, 0);
+
 
       }
+
       @media only screen and (max-width: 767px) {
-        margin-top: 10px;
-        font-size: 14px;
-
+        font-size: 35px;
       }
 
-      &.Front{
-        &::after{
-       
-          width: 95%;
-
-        }
-      }
-      &.Back{
-        &::after{
-        
-          width: 80%;
-
-        }
-      }
-      &.ReactJS{
-        &::after{
-        
-          width: 90%;
-
-        }
-      }
-      }
     }
-    .exp{
 
-      display: flex;
-      justify-content: space-between;
-      margin-top: 40px;
-      font-size: 16px;
-      text-align: left;
-
-      @media only screen and (max-width: 767px) {
-        flex-direction: column;
-        gap: 15px;
-        font-size: 12px;
-        margin-top: 20px;
-
-
-      }
-
-
-      
-      .exp-card{
-        
-        width: 45%;
-        padding: 20px 30px;
-        // box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, #c07efa 0px 0px 0px 1px inset;
-
-        @include btn-border-slide( var(--txt),#FF70C3, 2px, 0.8s);
-
-        // &:hover{
-
-        //   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-        // }
-        @media only screen and (max-width: 767px) {
+    .skills {
+      .skill-lines {
+        .skill {
+          --border-width: 3px;
+          text-align: left;
           width: 100%;
-          padding: 10px 20px;
+          position: relative;
+          margin-top: 20px;
+          font-size: 16px;
+          overflow: hidden;
+          padding-bottom: 3px;
 
-  
+          &::after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            height: var(--border-width);
+            background-color: #FF70C3;
+            bottom: 0;
+          }
+
+          &::before {
+            content: " ";
+            position: absolute;
+            left: 0;
+            height: var(--border-width);
+            background-color: var(--txt);
+            ;
+            bottom: 0;
+            width: 100%;
+          }
+
+          @media only screen and (max-width: 767px) {
+            margin-top: 10px;
+            font-size: 14px;
+          }
+
+          &.Front {
+            &::after {
+              width: 95%;
+            }
+          }
+
+          &.Back {
+            &::after {
+              width: 80%;
+            }
+          }
+
+          &.ReactJS {
+            &::after {
+              width: 90%;
+            }
+          }
+        }
+      }
+
+      .exp {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        font-size: 16px;
+        text-align: left;
+
+        @media only screen and (max-width: 767px) {
+          flex-direction: column;
+          gap: 15px;
+          font-size: 12px;
+          margin-top: 20px;
         }
 
-        .card-title{
-          font-size: 1.3em;
-          line-height: 1.8;
-          text-transform: capitalize;
-          letter-spacing: 0.1em;
-          -webkit-text-stroke: 0.7px var(--txt);;
-      
+        .exp-card {
+          width: 45%;
+          padding: 20px 30px;
+
+          @include btn-border-slide(var(--txt), #FF70C3, 2px, 0.8s);
+
+          @media only screen and (max-width: 767px) {
+            width: 100%;
+            padding: 10px 20px;
+          }
+
+          .card-title {
+            font-size: 1.3em;
+            line-height: 1.8;
+            text-transform: capitalize;
+            letter-spacing: 0.1em;
+            -webkit-text-stroke: 0.7px var(--txt);
+            ;
+          }
+
+          .company {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: var(--txt);
+
+          }
+
+          .time {
+            font-size: 0.8em;
+            color: rvar(--txt);
+            line-height: 1;
+
+          }
+
+          .description {
+            line-height: 1.4;
+            margin-top: 15px;
+          }
         }
-
-        .company{
-          font-weight: bold;
-          font-size: 1.2em;
-          color: var(--txt);
-
-        }
-        .time{
-          font-size: 0.8em;
-          color: rvar(--txt);
-          line-height: 1;
-
-        }
-        .description{
-          line-height: 1.4;
-          margin-top: 15px;
-
-        }
-
       }
     }
-  }
-  @media only screen and (max-width: 767px) {
+
+    @media only screen and (max-width: 767px) {
       max-width: 100%;
       font-size: 14px;
       line-height: 1.5;
-
+    }
   }
 }
-}
+
 @keyframes titleAnim {
   0% {
     width: 0;
-
   }
+
   100% {
     width: 10%;
-
-
-
-   
-}
+  }
 }
 
 @keyframes lineAnim {
   0% {
     transform: translate3d(-105%, 0, 0);
-
   }
+
   60% {
     transform: translate3d(0, 0, 0);
-
-
-   
+  }
 }
-}
+
 @keyframes borderAnimBefore1 {
   0% {
     transform: translate3d(0, 0, 0);
-
   }
+
   60% {
     transform: translate3d(-105%, 0, 0);
-
-
-   
-}
+  }
 }
 
 @keyframes borderAnimBefore2 {
   0% {
     transform: translate3d(0, 0, 0);
-
   }
+
   100% {
-
     transform: translate3d(0, 105%, 0);
-
-
-   
+  }
 }
-}
+
 @keyframes borderAnimAfter1 {
   0% {
     transform: translate3d(0, 0, 0);
-
   }
+
   60% {
-
     transform: translate3d(105%, 0, 0);
-
-
-   
+  }
 }
-}
+
 @keyframes borderAnimAfter2 {
   0% {
     transform: translate3d(0, 0, 0);
-
   }
+
   100% {
-
     transform: translate3d(0, -105%, 0);
-
-
-   
-}
+  }
 }

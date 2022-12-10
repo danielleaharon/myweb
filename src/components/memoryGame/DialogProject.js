@@ -2,8 +2,6 @@ import React from 'react';
 import {
   Dialog,
   DialogActions,
-
-
 } from "@material-ui/core";
 import "./dialog.scss";
 
@@ -30,7 +28,8 @@ export default function DialogProject({ showModal, handleClose, content }) {
       disableEscapeKeyDown
       aria-labelledby="dialog-title"
       aria-describedby="dialog-description"
-      id="dialog-project" >
+      id="dialog-project"
+      className='dialog-project'   >
       <div id="dialog-title">
         {content.title}
         <div className="project-img">
@@ -47,7 +46,6 @@ export default function DialogProject({ showModal, handleClose, content }) {
             <a className=' project-github' rel="noopener noreferrer" href={content.github} target='_blank'> <i className='fab fa-github fa-lg'></i>
               <span> see on GitHub</span>
             </a>
-
           </div>
           <div>
             {content.description}
@@ -56,23 +54,23 @@ export default function DialogProject({ showModal, handleClose, content }) {
                 <i className="fas fa-angle-right"></i>
               </span>
             </a>}
-
             {content.demo && <div className='see-demo-btn' onClick={() => setSeeDemo(!seeDeomo)}>See Demo
               <span className='arrow'>
                 <i className="fas fa-angle-right"></i>
               </span>
             </div>}
             {seeDeomo && <div className="content-demo">{content.demo}
-            <div className="dialog-close-container d-md-none" onClick={() => setSeeDemo(!seeDeomo)}>
-          <div className="leftright"></div>
-          <div className="rightleft"></div>
-          <label className="close">close</label>
-        </div>            </div>}
+              <div className="dialog-close-container d-md-none" onClick={() => setSeeDemo(!seeDeomo)}>
+                <div className="leftright"></div>
+                <div className="rightleft"></div>
+                <label className="close">close</label>
+              </div>
+            </div>}
           </div>
         </div>
       </div>
       <DialogActions>
-        <div className='project-btn' onClick={handleClose}>
+        <div className='project-btn-close' onClick={handleClose}>
           ok
         </div>
       </DialogActions>

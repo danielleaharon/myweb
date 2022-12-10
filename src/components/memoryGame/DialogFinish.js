@@ -3,14 +3,11 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-
 } from "@material-ui/core";
 import "./dialog.scss";
 
 
-
-export default function DialogProjectFinish({ showModal, handleClose, handleRestart, moves, bestScore ,later}) {
-
+export default function DialogProjectFinish({ showModal, handleClose, handleRestart, moves, bestScore, later }) {
 
   return (
     <Dialog
@@ -19,55 +16,38 @@ export default function DialogProjectFinish({ showModal, handleClose, handleRest
       aria-labelledby="dialog-title"
       aria-describedby="dialog-description"
       id="dialog-project-finish"
-    >
+      className='dialog-project'  >
       <div id='dialog-project-finish-page' className={(bestScore < moves) ? 'bad' : (bestScore === moves) ? 'good' : 'best'} >
         {
           (bestScore < moves) && <div id="dialog-title" >
             You really screwed up this time
           </div>
-
         }
         {
           (bestScore === moves) && <div id="dialog-title">
             <span>Not Good , Not bad</span>
-
           </div>
-        }  {
-
-          (bestScore > moves) &&
-
-          <div id="dialog-title">
+        }
+        {
+          (bestScore > moves) && <div id="dialog-title">
             <span>WOW! </span>
-
             <br />it's your best score!
           </div>
-
         }
-
         <DialogContent id="dialog-description">
-          {
-            (bestScore < moves) && <div>
-              your best score is {bestScore}.<br />
-              and you did it on {moves} moves;
-            </div>
+          {(bestScore < moves) && <div>
+            your best score is {bestScore}.<br />
+            and you did it on {moves} moves;
+          </div>
           }
-          {
-            (bestScore === moves) && <div>
-
-              You were so close to break youe best score!<br />
-              you play on {moves} moves;
-            </div>
-
-          }  {
-
-            (bestScore > moves) && <div>
-
-              you did it for only {moves} moves
-            </div>
-
+          {(bestScore === moves) && <div>
+            You were so close to break youe best score!<br />
+            you play on {moves} moves;
+          </div>
+          }  {(bestScore > moves) && <div>
+            you did it for only {moves} moves
+          </div>
           }
-
-
         </DialogContent>
         <DialogActions>
           <div className='project-btn start' onClick={handleRestart}>
@@ -76,7 +56,7 @@ export default function DialogProjectFinish({ showModal, handleClose, handleRest
               <i className="fas fa-angle-right"></i>
             </span>
           </div>
-          <div className='project-btn later' onClick={()=>{ handleClose(); later();}}>
+          <div className='project-btn later' onClick={() => { handleClose(); later(); }}>
             maybe later
             <span className='arrow'>
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="bi bi-emoji-frown" viewBox="0 0 19 19">

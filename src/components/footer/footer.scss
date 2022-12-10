@@ -34,8 +34,6 @@
         gap: 20px;
         flex-direction: column;
         padding: 0px 4%;
-
-
         max-height: 240px !important;
         padding-bottom: 140px;
 
@@ -62,7 +60,6 @@
 
         @media only screen and (max-width: 767px) {
             padding-left: 0px;
-
         }
     }
 
@@ -80,7 +77,6 @@
             position: absolute;
             bottom: 0;
             left: 10px;
-
         }
 
     }
@@ -93,7 +89,6 @@
 
         @media only screen and (max-width: 767px) {
             padding-left: 0%;
-
         }
     }
 
@@ -103,16 +98,15 @@
         @media only screen and (max-width: 767px) {
             margin-left: 24%;
             margin-top: 5px;
-
         }
 
         .btn-arrow {
             --txtcolor: var(--txt);
             --border-w: 3px;
 
+            display: block;
             font-size: 0.3em;
             letter-spacing: 0em;
-
             width: 220px;
             text-align: center;
 
@@ -120,7 +114,6 @@
                 --border-w: 2px;
                 font-size: 0.45em;
                 line-height: 1;
-
                 width: 140px;
                 height: 38px;
                 display: flex;
@@ -133,27 +126,18 @@
             &:hover {
                 .arrow {
                     left: 100%;
-
-
                 }
             }
 
             .arrow {
-
                 left: 95%;
                 top: 66%;
-
-
             }
-
         }
 
         &:hover {
             &::before {
-
                 background-color: var(--hovercolor);
-
-
             }
         }
 
@@ -185,7 +169,6 @@
         --txtcolor: var(--txt);
 
         .social-icons-links {
-
             padding: 0px 0px;
             gap: 0.25em;
         }
@@ -202,16 +185,12 @@
 
             &:hover {
                 --txtcolor: var(--bg);
-
                 background-color: var(--txt);
-
             }
-
         }
 
         @media only screen and (max-width: 767px) {
             position: absolute;
-
             left: 47%;
             bottom: 35%;
 
@@ -220,18 +199,13 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
             }
 
             .link {
                 padding: 15px;
                 width: 15px;
                 height: 15px;
-
-
-
             }
         }
-
     }
 }

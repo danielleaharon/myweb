@@ -2,24 +2,19 @@ import React from 'react';
 import {
   Dialog,
   DialogActions,
-
 } from "@material-ui/core";
 import "./dialog.scss";
 
-
-
-
 export default function DialogProjectStart({ showModal, handleClose, handleNotPlay }) {
 
-
   return (
-
     <Dialog
       open={showModal}
       disableEscapeKeyDown
       aria-labelledby="dialog-title"
       aria-describedby="dialog-description"
-      id="dialog-project-start"  >
+      id="dialog-project-start"
+      className='dialog-project'>
       <div className='dialog-project-start-page'>
         <div id="dialog-title">
           Hi!,<br /> Wanna play <br /> a Memory Game?

@@ -2,8 +2,6 @@ import React from 'react';
 import './contact.scss';
 import MeCool from '../../images/me-cool.png';
 import SocialIcons from '../../components/Social-icons/Social-icons';
-
-
 import {
   Dialog,
   DialogActions,
@@ -20,8 +18,7 @@ export default function Contact({ showModal, handleClose , state}) {
     aria-describedby="dialog-description"
     id="dialog-contact"
     maxWidth='xl'
-    className={state}
-     >
+    className={state}>
     <div className='dialog-contact-page'>
       <div id="dialog-content-title">
       </div>
@@ -39,7 +36,6 @@ export default function Contact({ showModal, handleClose , state}) {
         </div>
       </DialogContent>
       <DialogActions>
-
         <div className="dialog-close-container" onClick={handleClose}>
           <div className="leftright"></div>
           <div className="rightleft"></div>

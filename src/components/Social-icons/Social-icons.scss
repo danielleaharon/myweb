@@ -4,3 +4,49 @@
 	justify-content: center;
 	align-items: center;
 }
+.Social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 20px;
+    gap: 10px;
+    z-index: 10;
+
+    @media only screen and (max-width: 767px) {
+        padding: 5px 4px;
+    }
+
+    .link {
+        text-align: center;
+        padding: 20px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease-in-out;
+        border-radius: 50px;
+        border: solid transparent 1px;
+
+        @media only screen and (max-width: 767px) {
+            backdrop-filter: blur(4px);
+            width: 10px;
+            height: 10px;
+            padding: 15px;
+        }
+
+        .icon-link {
+            color: var(--txtcolor);
+            font-size: 20px;
+            @media only screen and (max-width: 767px) {
+                font-size: 17px;
+            }
+        }
+
+        &:hover {
+            border: solid var(--txtcolor) 1px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}

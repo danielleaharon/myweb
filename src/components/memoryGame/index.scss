@@ -1,8 +1,3 @@
-.bold {
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
 .memory {
   position: relative;
   width: 100%;
@@ -13,7 +8,6 @@
   @media only screen and (max-width: 768px) {
     height: calc(100vh - 180px);
     margin-bottom: 50px;
-
   }
 
   .container-slice {
@@ -29,7 +23,6 @@
       width: 100%;
       background-color: unset;
       padding-top: 0px;
-
     }
 
     .container {
@@ -62,7 +55,6 @@
       margin-bottom: 20px;
       background-color: unset;
       top: 0px;
-
     }
   }
 
@@ -81,7 +73,6 @@
     }
 
     .restart {
-
       background-color: var(--rndcolor);
       background-color: transparent;
       border: none;
@@ -100,7 +91,6 @@
       @media only screen and (max-width: 768px) {
         font-size: 12px;
         width: 110px;
-
       }
 
       &::before,
@@ -116,7 +106,6 @@
 
         @media only screen and (max-width: 768px) {
           border: 1.5px solid;
-
         }
       }
 
@@ -126,9 +115,7 @@
         border-bottom-color: transparent;
         border-right-color: transparent;
         border-top-color: var(--txtcolor);
-        ;
         border-left-color: var(--txtcolor);
-        ;
         opacity: 1;
       }
 
@@ -138,11 +125,8 @@
         border-top-color: transparent;
         border-left-color: transparent;
         border-bottom-color: var(--txtcolor);
-        ;
         border-right-color: var(--txtcolor);
-        ;
       }
-
 
       &:hover {
         background-color: transparent;
@@ -158,22 +142,18 @@
           height: 0%;
           border-right-color: transparent;
           border-bottom-color: var(--txtcolor);
-          ;
-
         }
 
         .arrow {
           opacity: 1;
           left: 100%;
           transition: all 0.3s ease-in-out;
-
         }
       }
 
       .arrow {
         opacity: 0;
         color: var(--txtcolor);
-        ;
         position: absolute;
         transition: all 0.3s ease-in-out;
         left: 90%;
@@ -182,13 +162,10 @@
 
         @media only screen and (max-width: 768px) {
           top: 53%;
-
         }
       }
-
     }
   }
-
 
   .container {
     display: grid;
@@ -208,7 +185,6 @@
       gap: 10px;
       margin: auto;
       padding: 0;
-
     }
   }
 }

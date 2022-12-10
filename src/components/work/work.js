@@ -2,8 +2,7 @@ import React from 'react';
 import './work.scss';
 import Opium from '../../images/work/opium.svg';
 import Looper from '../../images/work/soundlooper.svg';
-import { Link } from 'react-router-dom';
-
+import BtnArrow from '../btnArrow/btnArrow';
 
 
 const uniqueElementsArray = [
@@ -20,7 +19,6 @@ const uniqueElementsArray = [
 			github: "https://github.com/danielleaharon/androidproject",
 			image: require(`../../images/work/opium.svg`),
 			demoweb: 'https://www.opiumstore.online/'
-
 		}
 	},
 
@@ -37,17 +35,13 @@ const uniqueElementsArray = [
 			github: "https://github.com/danielleaharon/soundLooper",
 			image: require(`../../images/work/soundlooper.svg`),
 			demoweb: 'https://soundlooper.herokuapp.com/'
-
 		}
 	}
 
 ];
 export default function Work({ setModalProjectContent, setShowModalProject }) {
 
-
 	return (
-
-
 		<div id="intro-work-section" className='intro-work-section area'>
 			<div className='work-card Opium' style={{ '--bg': 'url(' + Opium + ')' }}>
 				<div className="top card-slice">
@@ -57,22 +51,12 @@ export default function Work({ setModalProjectContent, setShowModalProject }) {
 				<div className='content-hover'>
 					<div className='name'>
 						<span> Online product printing shop </span></div>
-					<div className='btn-arrow' onClick={() => { setModalProjectContent(uniqueElementsArray[0].content); setShowModalProject(true); }}> view project
-						<span className='arrow'>
-							<i className="fas fa-angle-right"></i>
-						</span>
-					</div>
+					<BtnArrow text={'view project'} onClick={() => { setModalProjectContent(uniqueElementsArray[0].content); setShowModalProject(true); }} />
 				</div>
 			</div>
 			<div className='intro-work'>
 				<div className='title'> Recent Work </div>
-				<Link className='btn-arrow' to='/work'> view all work
-					<span className='arrow'>
-						<i className="fas fa-angle-right"></i>
-					</span>
-				</Link>
-
-
+				<BtnArrow text={'view all work'} href={'/work'} target='_self' />
 			</div>
 			<div className='work-card Looper' style={{ '--bg': 'url(' + Looper + ')' }}>
 				<div className="top card-slice">
@@ -83,16 +67,9 @@ export default function Work({ setModalProjectContent, setShowModalProject }) {
 					<div className='name'>
 						<span>A site that offers to play up to 9 different loops together. </span>
 					</div>
-					<div className='btn-arrow' onClick={() => { setModalProjectContent(uniqueElementsArray[1].content); setShowModalProject(true); }}> view project
-						<span className='arrow'>
-							<i className="fas fa-angle-right"></i>
-						</span>
-					</div>
+					<BtnArrow text='view project' onClick={() => { setModalProjectContent(uniqueElementsArray[1].content); setShowModalProject(true); }} />
 				</div>
 			</div>
 		</div>
-
-
 	);
-
 }

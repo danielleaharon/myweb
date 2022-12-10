@@ -69,7 +69,6 @@
 
     @media only screen and (max-width: 767px) {
       font-size: 16px;
-
     }
 
     a {
@@ -99,7 +98,6 @@
         @media only screen and (max-width: 767px) {
           border-bottom: 3px solid black;
           bottom: -10px;
-
         }
       }
 
@@ -111,11 +109,8 @@
         &::after {
           transform: rotate(-2deg);
           transition: all ease-in-out 0.5s;
-
         }
-
       }
-
     }
   }
 
@@ -135,7 +130,6 @@
     border-radius: 2px;
     color: black;
     cursor: pointer;
-
   }
 
   .Social-icons-contact {
@@ -154,7 +148,6 @@
     @media only screen and (max-width: 767px) {
       padding-top: 10%;
       height: 34%;
-
     }
 
     &::before {
@@ -177,16 +170,12 @@
       color: var(--txtcolor);
       z-index: 2;
 
-
       @media only screen and (max-width: 767px) {
         font-size: 12px;
-
       }
-
     }
 
     .social-icons-links {
-
       padding: 0px 20px;
       margin-top: 10px;
       gap: 1em;
@@ -199,9 +188,7 @@
 
         @media only screen and (max-width: 767px) {
           font-size: 20px;
-
         }
-
       }
 
       @media only screen and (max-width: 767px) {
@@ -274,9 +261,7 @@
       label {
         opacity: 1;
       }
-
     }
-
   }
 
 }

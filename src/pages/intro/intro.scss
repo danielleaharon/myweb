@@ -1,23 +1,18 @@
 .intro {
-
   --hovercolor: #FF70C3;
   --bg: #04403D;
   --txt: rgb(238, 238, 238);
   background-color: var(--bg);
-  min-height: calc( 100vh - 90px);
+  min-height: calc(100vh - 90px);
   transition: 0.65s cubic-bezier(0.62, 0.02, 0.34, 1) 0.15s;
   position: relative;
   font-family: 'Sawarabi Mincho', serif;
   padding-bottom: 0px;
 
-
   @media only screen and (max-width: 768px) {
-    min-height: calc( var(--app-height) - 90px );
-
+    min-height: calc(var(--app-height) - 90px);
   }
 }
-
-
 
 @-webkit-keyframes scrollanim {
   0% {
@@ -110,12 +105,10 @@
 @keyframes onFocus {
   0% {
     transform: skewY(0deg);
-
   }
 
   100% {
     transform: skewY(20deg);
-
   }
 }
 
@@ -123,7 +116,6 @@
 @keyframes titleAnimHero {
   0% {
     width: 0;
-
   }
 
   100% {

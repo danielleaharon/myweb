@@ -9,7 +9,9 @@ import DialogProjectStart from "./DialogProjectStart";
 import "./index.scss";
 const cardRandomColor = ['#d471aa', '#095d59']
 
-const uniqueElementsArray = [
+
+//card open dialog content
+const projectContent = [
     {
         type: "ilist",
         image: require(`../../images/work/ilist.svg`),
@@ -31,7 +33,6 @@ const uniqueElementsArray = [
             github: "https://github.com/danielleaharon/androidproject",
             image: require(`../../images/work/ilist.svg`),
             demo: <iframe title="iList" src="https://appetize.io/embed/veudf5cvj43qu97h1c0gvrxnn4?device=pixel4" width="308px" height="730px" frameBorder="0" scrolling="no" ></iframe>
-
         }
     },
     {
@@ -46,7 +47,6 @@ const uniqueElementsArray = [
         As a trainee, the app gives you a wide variety of workout options and trainers to choose from.`,
             github: "https://github.com/danielleaharon/androidproject",
             image: require(`../../images/work/fitshare.svg`),
-
         }
     },
     {
@@ -59,7 +59,6 @@ const uniqueElementsArray = [
         Features user-specific recommendations based on previous interactions`,
             github: "https://github.com/danielleaharon/androidproject",
             image: require(`../../images/work/animal.svg`),
-
         }
     },
     {
@@ -99,7 +98,6 @@ const uniqueElementsArray = [
             description: `Presents who I am, what my abilities are and my projects.`,
             github: "https://github.com/danielleaharon/myweb",
             image: require(`../../images/work/my-web.svg`),
-
         }
     },
     {
@@ -115,10 +113,8 @@ const uniqueElementsArray = [
             github: "https://github.com/danielleaharon/soundLooper",
             image: require(`../../images/work/soundlooper.svg`),
             demoweb: 'https://soundlooper.herokuapp.com/'
-
         }
     }
-
 ];
 
 function shuffleCards(array) {
@@ -133,14 +129,13 @@ function shuffleCards(array) {
         cardTypes.forEach(card => {
             card.style.opacity = 1;
             card.style.removeProperty("display");
-
         })
     }
     return array;
 }
-export default function MemoryGame({ active }) {
+export default function MemoryGame() {
     const [cards, setCards] = useState(
-        shuffleCards.bind(null, uniqueElementsArray.concat(uniqueElementsArray))
+        shuffleCards.bind(null, projectContent.concat(projectContent))
     );
     const [openCards, setOpenCards] = useState([]);
     const [clearedCards, setClearedCards] = useState({});
@@ -148,7 +143,7 @@ export default function MemoryGame({ active }) {
     const [moves, setMoves] = useState(0);
     const [showModal, setShowModal] = useState(false);
     const [showModalProject, setShowModalProject] = useState(false);
-    const [modalProjectContent, setModalProjectContent] = useState(uniqueElementsArray[1].content);
+    const [modalProjectContent, setModalProjectContent] = useState(projectContent[1].content);
     const [noPlay, setNoPlay] = useState(false);
     const [rndColor, setRndColor] = useState(cardRandomColor[Math.floor(Math.random() * cardRandomColor.length)]);
 
@@ -182,12 +177,11 @@ export default function MemoryGame({ active }) {
             const [first, second] = openCards;
             enable();
             if (cards[first].type === cards[second].type) {
-                //open project model and see the card image 
+                //on fint match open project model and see the card content
                 setModalProjectContent(cards[first].content)
                 setShowModalProject(true)
                 setClearedCards((prev) => ({ ...prev, [cards[first].type]: true }));
                 setOpenCards([]);
-
                 return;
             }
             // This is to flip the cards back after 500ms duration
@@ -205,35 +199,30 @@ export default function MemoryGame({ active }) {
     }, [openCards, cards]);
 
     useEffect(() => {
-
         const checkCompletion = () => {
-            if (Object.keys(clearedCards).length === uniqueElementsArray.length) {
+            if (Object.keys(clearedCards).length === projectContent.length) {
                 if (!noPlay)
                     setShowModal(true);
                 const highScore = Math.min(moves, bestScore);
                 localStorage.setItem("bestScore", highScore);
             }
         };
-
-
-     
         checkCompletion();
-    }, [clearedCards, bestScore, noPlay,moves]);
-    useEffect(() => {
+    }, [clearedCards, bestScore, noPlay, moves]);
 
+    useEffect(() => {
         if (Object.keys(clearedCards).length > 0) {
             Object.keys(clearedCards).forEach((key) => {
                 var cardTypes = document.querySelectorAll('.' + key);
                 if (cardTypes.length > 1) {
                     cardTypes[1].style.opacity = 0;
-
                     if (noPlay)
                         cardTypes[1].style.display = "none";
-
                 }
             })
-        } 
-    }, [clearedCards,noPlay]);
+        }
+    }, [clearedCards, noPlay]);
+
     const checkIsFlipped = (index) => {
         return openCards.includes(index);
     };
@@ -251,14 +240,15 @@ export default function MemoryGame({ active }) {
         setNoPlay(false)
         setRndColor(cardRandomColor[Math.floor(Math.random() * cardRandomColor.length)])
         // set a shuffled deck of cards
-        setCards(shuffleCards(uniqueElementsArray.concat(uniqueElementsArray)));
+        setCards(shuffleCards(projectContent.concat(projectContent)));
     };
 
+    //flip card button - see all the project 
     const handleNotPlay = () => {
         setClearedCards({});
         setShouldDisableAllCards(false);
         setNoPlay(true);
-        uniqueElementsArray.forEach((card, index) => {
+        projectContent.forEach((card, index) => {
             setClearedCards((prev) => ({ ...prev, [card.type]: true }));
         })
     };
@@ -266,7 +256,6 @@ export default function MemoryGame({ active }) {
     return (
         <div className="memory">
             <div className='memory-btns ' style={{ '--rndcolor': rndColor }}>
-
                 <div className='btns'>
                     <div className="restart" onClick={handleRestart} >
                         New Game
@@ -283,7 +272,6 @@ export default function MemoryGame({ active }) {
                 </div>
             </div>
             <div className='container-slice '>
-
                 <div className="container">
                     {cards.map((card, index) => {
                         return (
@@ -305,7 +293,7 @@ export default function MemoryGame({ active }) {
             </div>
 
 
-            {!noPlay && showModal && !showModalProject && <DialogFinish handleRestart={handleRestart} handleClose={() => { setShowModal(false); setBestScore(localStorage.getItem("bestScore")); }} later={handleNotPlay } showModal={showModal} moves={moves} bestScore={bestScore} />}
+            {!noPlay && showModal && !showModalProject && <DialogFinish handleRestart={handleRestart} handleClose={() => { setShowModal(false); setBestScore(localStorage.getItem("bestScore")); }} later={handleNotPlay} showModal={showModal} moves={moves} bestScore={bestScore} />}
             {(showModalProject) && <DialogProject showModal={showModalProject} handleClose={() => { setShowModalProject(false) }} content={modalProjectContent} />}
             {(JSON.parse(sessionStorage.getItem("popupStart")) === null) && <DialogProjectStart showModal={true} handleClose={() => {
                 handleRestart(); sessionStorage.setItem("popupStart", true);
