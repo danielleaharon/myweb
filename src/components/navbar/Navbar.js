@@ -31,7 +31,7 @@ export default function Navbar(props) {
 				<BtnArrow  onClick={() => { sendDataClick('Resume') }}  text="Resume" href={cv} target='_blank'  />				
 			</div>
 			<div className="nav-menu-rows d-none d-md-flex">
-			<BtnArrow  onClick={() => { props.setShowContactModel(true) }} text="Contact"/>
+			<BtnArrow href={'#'}  onClick={() => { props.setShowContactModel(true) }} text="Contact"/>
 			</div>
 			<div className={"nav-menu-rows-mob d-md-none " + (mobmenu ? 'open' : 'close')}>
 				<div className="nav-menu-rows" >
@@ -40,7 +40,7 @@ export default function Navbar(props) {
 					<BtnArrow  onClick={() => { sendDataClick('Resume');setMobmenu(false) }}  text="Resume" href={cv} target='_blank'  />				
 				</div>
 				<div className="nav-menu-rows">
-					<BtnArrow  onClick={() => { setMobmenu(false); props.setShowContactModel(true) }} text="Contact"/>
+					<BtnArrow href={'#'}  onClick={() => { setMobmenu(false); props.setShowContactModel(true) }} text="Contact"/>
 				</div>
 				<div className='Social-icons Social-icons-menu'>
 					<div className='social-icons-title w-100'> get in touch</div>

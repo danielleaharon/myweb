@@ -51,7 +51,7 @@ export default function Work({ setModalProjectContent, setShowModalProject }) {
 				<div className='content-hover'>
 					<div className='name'>
 						<span> Online product printing shop </span></div>
-					<BtnArrow text={'view project'} onClick={() => { setModalProjectContent(uniqueElementsArray[0].content); setShowModalProject(true); }} />
+					<BtnArrow href={'#'} text={'view project'} onClick={() => { setModalProjectContent(uniqueElementsArray[0].content); setShowModalProject(true); }} />
 				</div>
 			</div>
 			<div className='intro-work'>
@@ -67,7 +67,7 @@ export default function Work({ setModalProjectContent, setShowModalProject }) {
 					<div className='name'>
 						<span>A site that offers to play up to 9 different loops together. </span>
 					</div>
-					<BtnArrow text='view project' onClick={() => { setModalProjectContent(uniqueElementsArray[1].content); setShowModalProject(true); }} />
+					<BtnArrow href={'#'} text='view project'  onClick={() => { setModalProjectContent(uniqueElementsArray[1].content); setShowModalProject(true); }} />
 				</div>
 			</div>
 		</div>
