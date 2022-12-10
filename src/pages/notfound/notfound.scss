@@ -2,11 +2,18 @@
   --hovercolor: #FF70C3;
   --txt: #04403D;
   --bg: rgb(238, 238, 238);
-  min-height: 100vh;
+  min-height: calc(100vh - 90px);
   background-color: var(--bg);
   font-family: 'Sawarabi Mincho', serif;
+  background-image: url(../../images/me-search.png);
+  background-size: 23%;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  overflow: hidden;
   color: var(--txt);
   @media only screen and (max-width: 767px) {
+    background-size: 50%;
+
     height: var(--app-height);
   }
   .not-found-content{
@@ -21,7 +28,7 @@
     letter-spacing: -0.04em;
     @media only screen and (max-width: 768px) {
       font-size: 2rem;
-      height: 90vh;
+      height: 75vh;
 
     }
     .number{

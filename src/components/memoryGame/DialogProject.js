@@ -62,7 +62,12 @@ export default function DialogProject({ showModal, handleClose, content }) {
                 <i className="fas fa-angle-right"></i>
               </span>
             </div>}
-            {seeDeomo && <p className="content-demo">{content.demo}</p>}
+            {seeDeomo && <div className="content-demo">{content.demo}
+            <div className="dialog-close-container d-md-none" onClick={() => setSeeDemo(!seeDeomo)}>
+          <div className="leftright"></div>
+          <div className="rightleft"></div>
+          <label className="close">close</label>
+        </div>            </div>}
           </div>
         </div>
       </div>

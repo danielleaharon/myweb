@@ -50,9 +50,17 @@ export function sendData() {
     form.appendChild(form_browserName)
 
 
-    return (form)
-  }).then(form => {
-    sendEmail(form,'template_8olbpdh');
+    const datatosend={
+      form:form,
+      ip:data.IPv4
+    }
+    return (datatosend)
+  }).then(datatosend => {
+    //home ip 
+    if(!datatosend.ip.includes('85.65.165.122')){
+          sendEmail(datatosend.form,'template_8olbpdh');
+    }
+  
   })
   }
 
@@ -120,7 +128,7 @@ export function sendDataClick(clickOn) {
 
     return (form)
   }).then(form => {
-    // sendEmail(form,'template_juuk0o6');
+    sendEmail(form,'template_juuk0o6');
   })
   
 

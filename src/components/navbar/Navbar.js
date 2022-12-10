@@ -37,7 +37,7 @@ export default function Navbar(props) {
 					<span className='arrow'><i className="fas fa-angle-right"></i></span>
 				</div>
 
-				<div className='btn-arrow' onClick={() => sendDataClick('Work')} >
+				<div className='btn-arrow'  >
 					<Link to='/work'>
 						<div className="navLink"> Work</div>
 					</Link>
@@ -76,7 +76,7 @@ export default function Navbar(props) {
 						</span>
 					</Link>
 
-					<Link className='btn-arrow' to='/work' onClick={() => { sendDataClick('Resume'); setMobmenu(false) }}>
+					<Link className='btn-arrow' to='/work' onClick={() => {  setMobmenu(false) }}>
 						<div className="navLink"> Work</div>
 						<span className='arrow'>
 							<i className="fas fa-angle-right"></i>
