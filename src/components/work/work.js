@@ -12,10 +12,7 @@ const uniqueElementsArray = [
 		content: {
 			title: "Opuim Store",
 			lang: 'React&Wordpress',
-			description: `Online product printing shop,
-        The site offers a platform for designing visualization of products and sending the order to the store.
-        The site was built with wordpress handles and with react.
-        As part of a "user experience" project at the college, we took the store's old website and wrote a detailed description of how to improve it. After school I decided to implement the changes.`,
+			description: `An online platform for custom product printing, allowing users to design and order their products. The website was built using WordPress and React as part of a college "user experience" project, where the team analyzed and proposed improvements to the store's previous website. I implemented these changes after the project's completion.`,
 			github: "https://github.com/danielleaharon/androidproject",
 			image: require(`../../images/work/opium.svg`),
 			demoweb: 'https://www.opiumstore.online/'
@@ -28,10 +25,7 @@ const uniqueElementsArray = [
 		content: {
 			title: "Sound Looper",
 			lang: 'React',
-			description: `Sound looper,
-        A site that offers to play up to 9 different loops together.
-        The legality: each round of a loop is 8 seconds, you can add to the next round as many loops as you want (once the round has started the loop will be added to the next loop)
-        You can also record the loop and play it again.`,
+			description: `A website that allows users to play and layer up to nine different loops simultaneously. Each loop cycle is 8 seconds, and users can add additional loops during each round. The site also features a recording function, enabling users to save and replay their loops`,
 			github: "https://github.com/danielleaharon/soundLooper",
 			image: require(`../../images/work/soundlooper.svg`),
 			demoweb: 'https://soundlooper.herokuapp.com/'

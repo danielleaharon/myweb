@@ -17,6 +17,10 @@ export default function Hero(props) {
 		};
 	}, []);
 
+	React.useEffect(() => {
+		window.scrollTo(0,0)
+	}, []);
+
 	const scrollhandelr = () => {
 		var top = document.getElementById("scroll-container-intro").scrollTop;
 		var vh = document.documentElement.clientHeight

@@ -1,4 +1,3 @@
-import './email.scss';
 import emailjs from '@emailjs/browser';
 import axios from 'axios'
 import { deviceDetect } from "react-device-detect"

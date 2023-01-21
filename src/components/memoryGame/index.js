@@ -19,16 +19,7 @@ const projectContent = [
             title: "iList",
             lang: 'Android studio',
             description: (<div>
-                A shopping list app designed for easy sharing of your shopping list with your family or roommates.
-                Features:
-                <ul>
-                    <li>List sharing with your friends - Add, Edit & Delete any items in your list and seamlessly sync changes with your friends</li>
-                    <li>Photo uploading for easy recognition of desired items</li>
-                    <li>Tagging items as bought</li>
-                    <li>Copy and send lists anymore you want</li>
-                    <li>Supports Both Hebrew and English. And multiple colors schemes</li>
-                    <li>server side on Firebase</li>
-                </ul>
+            An app that simplifies grocery shopping by allowing you to easily share lists with your family or roommates. Features include list sharing with friends, photo uploading for item recognition, tagging items as bought, the ability to copy and send lists, support for Hebrew and English, and multiple color schemes. The app utilizes Firebase for server-side functionality.
             </div>),
             github: "https://github.com/danielleaharon/androidproject",
             image: require(`../../images/work/ilist.svg`),
@@ -41,10 +32,7 @@ const projectContent = [
         content: {
             title: <span> FitShare  <span className="fs18 d-block">FullStack final project </span></span>,
             lang: 'Android studio',
-            description: `FitShare is a social network dedicated to home fitness.
-        The app allows trainers to share videos of their workouts and open synchronized zoom meetings for trainees to join.
-        Trainers also have an option to post their videos with special equipment needed and muscles group which the video is designed for.
-        As a trainee, the app gives you a wide variety of workout options and trainers to choose from.`,
+            description: `FitShare is a social platform focused on at-home fitness. It allows trainers to share workout videos and host synchronized Zoom sessions for trainees to participate in. Trainers have the option to post videos with specific equipment or muscle group focus. As a trainee, the app offers a diverse selection of workout options and trainers to choose from.`,
             github: "https://github.com/danielleaharon/androidproject",
             image: require(`../../images/work/fitshare.svg`),
         }
@@ -79,10 +67,7 @@ const projectContent = [
         content: {
             title: "Opuim Store",
             lang: 'React&Wordpress',
-            description: `Online product printing shop,
-        The site offers a platform for designing visualization of products and sending the order to the store.
-        The site was built with wordpress handles and with react.
-        As part of a "user experience" project at the college, we took the store's old website and wrote a detailed description of how to improve it. After school I decided to implement the changes.`,
+            description: `An online platform for custom product printing, allowing users to design and order their products. The website was built using WordPress and React as part of a college "user experience" project, where the team analyzed and proposed improvements to the store's previous website. I implemented these changes after the project's completion.`,
             github: "https://github.com/danielleaharon/androidproject",
             image: require(`../../images/work/opium.svg`),
             demoweb: 'https://www.opiumstore.online/'
@@ -95,7 +80,7 @@ const projectContent = [
         content: {
             title: <span> my site  <span className="fs18 d-block">this one </span></span>,
             lang: 'React',
-            description: `Presents who I am, what my abilities are and my projects.`,
+            description: `My website serves as an introduction to my identity, skills, and portfolio of work.`,
             github: "https://github.com/danielleaharon/myweb",
             image: require(`../../images/work/my-web.svg`),
         }
@@ -106,10 +91,7 @@ const projectContent = [
         content: {
             title: "Sound Looper",
             lang: 'React',
-            description: `Sound looper,
-        A site that offers to play up to 9 different loops together.
-        The legality: each round of a loop is 8 seconds, you can add to the next round as many loops as you want (once the round has started the loop will be added to the next loop)
-        You can also record the loop and play it again.`,
+            description: `A website that allows users to play and layer up to nine different loops simultaneously. Each loop cycle is 8 seconds, and users can add additional loops during each round. The site also features a recording function, enabling users to save and replay their loops.`,
             github: "https://github.com/danielleaharon/soundLooper",
             image: require(`../../images/work/soundlooper.svg`),
             demoweb: 'https://soundlooper.herokuapp.com/'

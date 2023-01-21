@@ -9,12 +9,15 @@ export default function About() {
       <div className='intro-about'>
         <div className='title'> About me </div>
         <p>
-          I live in Rehovot,Israel, I met my husband in the army 7 years ago, and we recently got married.<br></br>
-          I like to cook, train in kickboxing, and watch Netflix.
-          My love for code started at the beginning of my computer science degree, and since then the world of the web has occupied a large part of my heart.
+          Hi, my name is Danielle and I am a frontend web developer lived in Rehovot, Israel. <br/>
+          I am passionate about creating visually stunning and user-friendly websites that leave a lasting impression on users. With my expertise in HTML, CSS, and JavaScript, I bring my clients' visions to life on the web. I have an eye for detail and stay up-to-date with the latest web development trends to ensure that my projects are of the highest quality and exceed expectations.
+          When I'm not working on web projects, I enjoy the simple things in life. <br/>
+          I am married to my best friend, Chen, I love to cook and  training in kickboxing, which has taught me discipline and focus that I bring to my work.
+
         </p>
         <p>
-          Since graduation I have been involved in developing small websites including 4legs and Opium, today I working as Wordpress web developer at JFrog.</p>
+          I am dedicated to delivering high-quality and visually pleasing websites that will help my clients achieve their goals.<br/> I would love to work with you and bring your vision to life on the web. Feel free to contact me to discuss your project.
+        </p>
         <div className='skills '>
           <div className='skill-lines'>
             <div className='skill Front'>Front-end</div>
@@ -28,7 +31,7 @@ export default function About() {
                   <div className='card-title'>Frontend developer</div>
                   <div className='company'>JFrog</div>
                   <div className='time'>2021-present</div>
-                  <div className='description'>Website maintenance on the server side and on the client side, use of wordprees</div>
+                  <div className='description'>Website maintenance on the server side and on the client side, use of Wordprees</div>
                 </div>
               </div>
             </div>
