@@ -27,7 +27,7 @@
       justify-self: center;
       gap: 75px;
       padding-bottom: 12%;
-      left: -40px;
+      left: -30px;
     }
 
     &::after {
@@ -46,7 +46,23 @@
         left: 0vw;
       }
     }
-
+    .btn-arrow {
+      --txtcolor: var(--txt);
+      font-size: 14px;
+      padding: 10px 20px;
+      text-align: center;
+      min-width: 100px;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      @media only screen and (max-width: 768px) {
+        margin-top: 10px;
+        z-index: 1;
+      }
+    }
     .intro-work {
       font-size: 16px;
       text-align: center;
@@ -75,22 +91,7 @@
         }
       }
 
-      .btn-arrow {
-        --txtcolor: var(--txt);
-        font-size: 14px;
-        padding: 10px 20px;
-        text-align: center;
-        min-width: 100px;
-        display: inline-block;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        text-decoration: none;
-        @media only screen and (max-width: 768px) {
-          margin-top: 20px;
-        }
-      }
+     
     }
 
     .work-card {

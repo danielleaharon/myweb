@@ -27,7 +27,9 @@ function App() {
   React.useEffect(() => {
     sendData();
   },[])
- 
+  React.useEffect(() => {
+		window.scrollTo(0,0)
+	}, []);
   const NavRoute = ({exact,state, path, component: Component}) => (
     <Route exact={exact} path={path} render={(props) => (
       <div id="scroll-container-intro" className="scroll-container">

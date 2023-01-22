@@ -11,12 +11,10 @@ export default function About() {
         <p>
           Hi, my name is Danielle and I am a frontend web developer lived in Rehovot, Israel. <br/>
           I am passionate about creating visually stunning and user-friendly websites that leave a lasting impression on users. With my expertise in HTML, CSS, and JavaScript, I bring my clients' visions to life on the web. I have an eye for detail and stay up-to-date with the latest web development trends to ensure that my projects are of the highest quality and exceed expectations.
-          When I'm not working on web projects, I enjoy the simple things in life. <br/>
-          I am married to my best friend, Chen, I love to cook and  training in kickboxing, which has taught me discipline and focus that I bring to my work.
-
         </p>
         <p>
-          I am dedicated to delivering high-quality and visually pleasing websites that will help my clients achieve their goals.<br/> I would love to work with you and bring your vision to life on the web. Feel free to contact me to discuss your project.
+        When I'm not working on web projects, I enjoy the simple things in life. <br/>
+          I am married to my best friend, Chen, I love to cook and  training in kickboxing, which has taught me discipline and focus that I bring to my work.
         </p>
         <div className='skills '>
           <div className='skill-lines'>

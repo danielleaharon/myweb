@@ -37,6 +37,8 @@ export default function Work({ setModalProjectContent, setShowModalProject }) {
 
 	return (
 		<div id="intro-work-section" className='intro-work-section area'>
+			<BtnArrow text={'view all work'} href={'/work'} target='_self' className="d-md-none d-inline-block" />
+
 			<div className='work-card Opium' style={{ '--bg': 'url(' + Opium + ')' }}>
 				<div className="top card-slice">
 				</div>
@@ -50,7 +52,7 @@ export default function Work({ setModalProjectContent, setShowModalProject }) {
 			</div>
 			<div className='intro-work'>
 				<div className='title'> Recent Work </div>
-				<BtnArrow text={'view all work'} href={'/work'} target='_self' />
+				<BtnArrow text={'view all work'} href={'/work'} target='_self' className="d-none d-md-inline-block" />
 			</div>
 			<div className='work-card Looper' style={{ '--bg': 'url(' + Looper + ')' }}>
 				<div className="top card-slice">

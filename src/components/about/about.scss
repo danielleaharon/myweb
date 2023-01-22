@@ -270,15 +270,16 @@
         text-align: left;
 
         @media only screen and (max-width: 767px) {
-          flex-direction: column;
+          flex-direction: row;
           gap: 15px;
           font-size: 12px;
+      
           margin-top: 20px;
         }
 
         .exp-card {
           width: 45%;
-          padding: 20px 30px;
+          padding: 15px 30px;
 
           @include btn-border-slide(var(--txt), #FF70C3, 2px, 0.8s);
 
@@ -293,7 +294,11 @@
             text-transform: capitalize;
             letter-spacing: 0.1em;
             -webkit-text-stroke: 0.7px var(--txt);
-            ;
+
+            @media only screen and (max-width: 767px) {
+              line-height: 1.4;
+
+            }
           }
 
           .company {
@@ -313,6 +318,10 @@
           .description {
             line-height: 1.4;
             margin-top: 15px;
+            display: block;
+            @media only screen and (max-width: 767px) {
+              display: none;
+            }
           }
         }
       }
