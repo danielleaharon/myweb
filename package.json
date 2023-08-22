@@ -16,7 +16,7 @@
     "react-device-detect": "^2.2.2",
     "react-dom": "^16.14.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.0",
+    "react-scripts": "^3.4.0",
     "sass": "^1.55.0"
   },
   "scripts": {

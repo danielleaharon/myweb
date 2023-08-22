@@ -1,5 +1,4 @@
 import React from 'react';
-import { sendDataClick } from '../email/email';
 import SocialIcons from '../Social-icons/Social-icons';
 import './navbar.scss';
 import { Sling as Hamburger } from 'hamburger-react'
@@ -28,7 +27,7 @@ export default function Navbar(props) {
 			<div className="nav-menu-rows d-none d-md-flex" >
 				<BtnArrow  text="Who" span={'am i'} href={'/'} target='_self'  />
 				<BtnArrow  text="Work" href={'/work'} target='_self'  />
-				<BtnArrow  onClick={() => { sendDataClick('Resume') }}  text="Resume" href={cv} target='_blank'  />				
+				<BtnArrow    text="Resume" href={cv} target='_blank'  />				
 			</div>
 			<div className="nav-menu-rows d-none d-md-flex">
 			<BtnArrow href={'#'}  onClick={() => { props.setShowContactModel(true) }} text="Contact"/>
@@ -37,7 +36,7 @@ export default function Navbar(props) {
 				<div className="nav-menu-rows" >
 					<BtnArrow  text="Who" span={'am i'} href={'/'} target='_self'  onClick={() => setMobmenu(false)} />
 					<BtnArrow  text="Work" href={'/work'} target='_self'  onClick={() => { setMobmenu(false) }}/>
-					<BtnArrow  onClick={() => { sendDataClick('Resume');setMobmenu(false) }}  text="Resume" href={cv} target='_blank'  />				
+					<BtnArrow   text="Resume" href={cv} target='_blank'  />				
 				</div>
 				<div className="nav-menu-rows">
 					<BtnArrow href={'#'}  onClick={() => { setMobmenu(false); props.setShowContactModel(true) }} text="Contact"/>

@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Work from './pages/work/work';
 import Intro from './pages/intro/intro';
 import NotFound from './pages/notfound/notfound';
-import {sendData} from './components/email/email';
 import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/footer';
 import Contact from './pages/contact/contact';
@@ -24,9 +23,7 @@ function App() {
     appHeight()
   }, [])
 
-  React.useEffect(() => {
-    sendData();
-  },[])
+ 
   React.useEffect(() => {
 		window.scrollTo(0,0)
 	}, []);
